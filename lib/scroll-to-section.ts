@@ -2,8 +2,8 @@
  * Fix fejléc miatti offset görgetéskor. Ugyanaz a logika, mint a headerben.
  * Nagyobb érték → kevesebbet görget (a cím feljebb esik a nézetben).
  */
-export const SECTION_SCROLL_OFFSET_DESKTOP_PX = 88
-export const SECTION_SCROLL_OFFSET_MOBILE_PX = 96
+export const SECTION_SCROLL_OFFSET_DESKTOP_PX = -20
+export const SECTION_SCROLL_OFFSET_MOBILE_PX = -20
 export const SECTION_SCROLL_LG_MIN_WIDTH_PX = 1024
 
 export function getSectionScrollOffsetPx(): number {
