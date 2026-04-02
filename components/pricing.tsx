@@ -17,7 +17,7 @@ const plans = [
       "1 hónap támogatás",
     ],
     highlighted: false,
-    accent: "bg-indigo-400/20 text-indigo-100",
+    accent: "bg-blue-100 text-blue-700",
   },
   {
     name: "Professzionális",
@@ -51,28 +51,28 @@ const plans = [
       "Prioritásos ügyfélszolgálat",
     ],
     highlighted: false,
-    accent: "bg-cyan-400/20 text-cyan-100",
+    accent: "bg-cyan-100 text-cyan-700",
   },
 ]
 
 export function Pricing() {
   return (
     <section id="arak" className="relative overflow-hidden py-32">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#7c3aed]/5 to-transparent pointer-events-none" />
-      <div className="absolute left-1/2 top-0 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-[#7c3aed]/10 blur-[150px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none" />
+      <div className="absolute left-1/2 top-0 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[150px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-20 text-center">
           <div className="glass mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2">
-            <span className="relative z-10 text-sm text-[#a855f7]">Csomagok</span>
+            <span className="relative z-10 text-sm text-blue-700">Csomagok</span>
           </div>
-          <h2 className="mb-6 text-4xl font-bold text-white sm:text-5xl">
+          <h2 className="mb-6 text-4xl font-bold text-slate-900 sm:text-5xl">
             Átlátható{" "}
-            <span className="bg-gradient-to-r from-[#7c3aed] to-[#a855f7] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
               árazás
             </span>
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-white/50">
+          <p className="mx-auto max-w-2xl text-lg text-slate-600">
             Válaszd ki az igényeidnek megfelelő csomagot.
           </p>
         </div>
@@ -100,13 +100,13 @@ export function Pricing() {
                 }`}
               >
                 <div className="relative z-10 mb-8 text-center">
-                  <h3 className="mb-4 text-xl font-semibold text-white">{plan.name}</h3>
+                  <h3 className="mb-4 text-xl font-semibold text-slate-900">{plan.name}</h3>
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-lg text-white/50">Ft</span>
+                    <span className="text-5xl font-bold text-slate-900">{plan.price}</span>
+                    <span className="text-lg text-slate-500">Ft</span>
                   </div>
-                  <p className="mt-2 text-sm text-[#a855f7]">Kivitelezés: {plan.duration}</p>
-                  <p className="mt-3 text-sm text-white/50">{plan.description}</p>
+                  <p className="mt-2 text-sm text-blue-700">Kivitelezés: {plan.duration}</p>
+                  <p className="mt-3 text-sm text-slate-600">{plan.description}</p>
                 </div>
 
                 <ul className="relative z-10 mb-8 flex-1 space-y-4">
@@ -115,7 +115,7 @@ export function Pricing() {
                       <div className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${plan.accent}`}>
                         <Check className="h-3 w-3" />
                       </div>
-                      <span className="text-sm text-white/70">{feature}</span>
+                      <span className="text-sm text-slate-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -129,7 +129,7 @@ export function Pricing() {
                   className={`relative z-10 mt-auto block w-full cursor-pointer rounded-2xl py-4 text-center font-semibold transition-all ${
                     plan.highlighted
                       ? "gradient-purple text-white hover:opacity-90"
-                      : "glass-button text-white hover:bg-white/10"
+                      : "glass-button text-slate-800 hover:bg-white/10"
                   }`}
                 >
                   Ajánlatot kérek

@@ -80,8 +80,8 @@ export function Header() {
               />
             </div>
             <div className="min-w-0">
-              <span className="text-base font-semibold text-white sm:text-lg">honlapholnapra</span>
-              <span className="text-[#a855f7]">.hu</span>
+              <span className="text-base font-semibold text-slate-900 sm:text-lg">honlapholnapra</span>
+              <span className="text-blue-600">.hu</span>
             </div>
           </Link>
 
@@ -91,10 +91,10 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={handleSectionClick(item.href)}
-                className="group relative px-4 py-2 text-sm text-white/60 transition-colors hover:text-white"
+                className="group relative px-4 py-2 text-sm text-slate-500 transition-colors hover:text-slate-900"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#7c3aed] transition-all duration-300 group-hover:w-4/5" />
+                <span className="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-blue-600 transition-all duration-300 group-hover:w-4/5" />
               </Link>
             ))}
           </nav>
@@ -111,7 +111,7 @@ export function Header() {
           </div>
 
           <button
-            className="glass-button flex h-10 w-10 items-center justify-center rounded-xl text-white lg:hidden"
+            className="glass-button flex h-10 w-10 items-center justify-center rounded-xl text-slate-800 lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Menü"
           >
@@ -134,7 +134,7 @@ export function Header() {
               key={item.href}
               href={item.href}
               onClick={handleSectionClick(item.href)}
-              className="rounded-xl px-4 py-3 text-white/70 transition-all hover:bg-white/5 hover:text-white"
+              className="rounded-xl px-4 py-3 text-slate-600 transition-all hover:bg-white/60 hover:text-slate-900"
             >
               {item.label}
             </Link>

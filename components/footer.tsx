@@ -26,8 +26,8 @@ const navigation = {
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/5">
-      <div className="absolute inset-0 bg-gradient-to-t from-[#030014] to-transparent pointer-events-none" />
+    <footer className="relative border-t border-slate-300/60">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-sky-50/70 to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 lg:py-20">
         <div className="glass glass-panel rounded-3xl px-8 py-10 md:px-10 md:py-12">
@@ -44,17 +44,17 @@ export function Footer() {
                   />
                 </div>
                 <div>
-                  <span className="text-lg font-semibold text-white">honlapholnapra</span>
-                  <span className="text-[#a855f7]">.hu</span>
+                  <span className="text-lg font-semibold text-slate-900">honlapholnapra</span>
+                  <span className="text-blue-700">.hu</span>
                 </div>
               </Link>
-              <p className="mt-6 max-w-xs text-sm leading-relaxed text-white/40">
+              <p className="mt-6 max-w-xs text-sm leading-relaxed text-slate-600">
                 Professzionális weboldal készítés modern technológiákkal, gyorsan és megbízhatóan.
               </p>
             </div>
 
             <div>
-              <h3 className="mb-6 font-semibold text-white">Szolgáltatások</h3>
+              <h3 className="mb-6 font-semibold text-slate-900">Szolgáltatások</h3>
               <ul className="space-y-4">
                 {navigation.services.map((item) => (
                   <li key={item.name}>
@@ -66,7 +66,7 @@ export function Footer() {
                           scrollToSectionHash(item.href)
                         }
                       }}
-                      className="text-sm text-white/40 transition-colors hover:text-white"
+                      className="text-sm text-slate-600 transition-colors hover:text-slate-900"
                     >
                       {item.name}
                     </Link>
@@ -76,7 +76,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="mb-6 font-semibold text-white">Cég</h3>
+              <h3 className="mb-6 font-semibold text-slate-900">Cég</h3>
               <ul className="space-y-4">
                 {navigation.company.map((item) => (
                   <li key={item.name}>
@@ -88,7 +88,7 @@ export function Footer() {
                           scrollToSectionHash(item.href)
                         }
                       }}
-                      className="text-sm text-white/40 transition-colors hover:text-white"
+                      className="text-sm text-slate-600 transition-colors hover:text-slate-900"
                     >
                       {item.name}
                     </Link>
@@ -98,11 +98,11 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="mb-6 font-semibold text-white">Jogi</h3>
+              <h3 className="mb-6 font-semibold text-slate-900">Jogi</h3>
               <ul className="space-y-4">
                 {navigation.legal.map((item) => (
                   <li key={item.name}>
-                    <Link href={item.href} className="text-sm text-white/40 transition-colors hover:text-white">
+                    <Link href={item.href} className="text-sm text-slate-600 transition-colors hover:text-slate-900">
                       {item.name}
                     </Link>
                   </li>
@@ -112,8 +112,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-white/5 pt-8 lg:flex-row">
-          <p className="text-sm text-white/30">
+        <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-slate-300/60 pt-8 lg:flex-row">
+          <p className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} honlapholnapra.hu. Minden jog fenntartva.
           </p>
           

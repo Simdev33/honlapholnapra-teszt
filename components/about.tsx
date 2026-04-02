@@ -1,113 +1,100 @@
-﻿"use client"
+"use client"
 
-import { Award, Clock, Lightbulb, Shield, Target, Users, Zap } from "lucide-react"
+import { Clock3, Gauge, ShieldCheck } from "lucide-react"
 
-const stats = [
+const guarantees = [
   {
-    icon: Users,
-    value: "100+",
-    label: "Elégedett ügyfél",
-    accent: "from-violet-500 to-fuchsia-500 shadow-[0_16px_40px_rgba(168,85,247,0.3)]",
+    icon: Clock3,
+    title: "Sebesség, bürokratikus körök nélkül",
+    description:
+      "A nevünk kötelez. Nem tartunk felesleges, órákig tartó meetingeket a semmiről. Kifejlesztettünk egy olyan sziklaszilárd, saját rendszert, amivel a projekt méretétől függően akár ténylegesen 24 óra alatt át tudjuk adni a kész, működő weboldaladat.",
+    accent: "from-orange-500 to-red-500 shadow-[0_16px_40px_rgba(249,115,22,0.3)]",
   },
   {
-    icon: Award,
-    value: "5+",
-    label: "Év tapasztalat",
-    accent: "from-indigo-500 to-violet-500 shadow-[0_16px_40px_rgba(99,102,241,0.3)]",
+    icon: ShieldCheck,
+    title: "Mérnöki precizitás, nem \"összegányolás\"",
+    description:
+      "Nem sablonokat foltozgatunk, és nem telepítünk 30 felesleges bővítményt, amitől másnap összeomlik az oldalad. Tiszta, modern és hackertámadások ellen védett kódot írunk.",
+    accent: "from-blue-700 to-cyan-600 shadow-[0_16px_40px_rgba(37,99,235,0.3)]",
   },
   {
-    icon: Clock,
-    value: "150+",
-    label: "Elkészült projekt",
-    accent: "from-cyan-500 to-sky-500 shadow-[0_16px_40px_rgba(34,211,238,0.28)]",
-  },
-  {
-    icon: Zap,
-    value: "24h",
-    label: "Leggyorsabb projekt",
-    accent: "from-blue-500 to-indigo-500 shadow-[0_16px_40px_rgba(59,130,246,0.28)]",
-  },
-]
-
-const values = [
-  {
-    icon: Clock,
-    title: "Gyorsaság",
-    description: "Az időd értékes. Gyorsan dolgozunk, minőség feláldozása nélkül.",
-    accent: "from-violet-500 to-fuchsia-500 shadow-[0_16px_40px_rgba(168,85,247,0.28)]",
-  },
-  {
-    icon: Target,
-    title: "Minőség",
-    description: "Minden projektet a legmagasabb színvonalon készítünk el.",
-    accent: "from-indigo-500 to-violet-500 shadow-[0_16px_40px_rgba(99,102,241,0.28)]",
-  },
-  {
-    icon: Lightbulb,
-    title: "Innováció",
-    description: "A legújabb trendeket és technológiákat követjük.",
-    accent: "from-cyan-500 to-blue-500 shadow-[0_16px_40px_rgba(34,211,238,0.26)]",
-  },
-  {
-    icon: Shield,
-    title: "Megbízhatóság",
-    description: "Amit ígérünk, azt tartjuk. Határidőre szállítunk.",
-    accent: "from-fuchsia-500 to-pink-500 shadow-[0_16px_40px_rgba(217,70,239,0.26)]",
+    icon: Gauge,
+    title: "Weboldal helyett bevételtermelő gépezet",
+    description:
+      "Minket nem csak az érdekel, hogy \"szép\" legyen a dizájn. Minket az érdekel, hogy az oldalad pénzt termeljen neked. Villámgyors betöltéssel, Google-barát (SEO) alapokkal, és profi Google Ads kampánykezeléssel gondoskodunk arról, hogy a befektetésed a lehető leghamarabb megtérüljön.",
+    accent: "from-violet-600 to-fuchsia-500 shadow-[0_16px_40px_rgba(139,92,246,0.28)]",
   },
 ]
 
 export function About() {
   return (
     <section id="rolunk" className="relative overflow-hidden py-32">
-      <div className="absolute right-0 top-1/2 h-[400px] w-[400px] rounded-full bg-[#ec4899]/10 blur-[120px] pointer-events-none" />
+      <div className="absolute right-0 top-1/2 h-[420px] w-[420px] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="grid items-start gap-16 lg:grid-cols-2">
-          <div>
-            <div className="glass mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2">
-              <span className="text-sm text-[#a855f7]">Rólunk</span>
-            </div>
-            <h2 className="mb-8 text-4xl font-bold text-white sm:text-5xl">
-              A{" "}
-              <span className="bg-gradient-to-r from-[#7c3aed] to-[#a855f7] bg-clip-text text-transparent">
-                honlapholnapra
-              </span>{" "}
-              csapata
-            </h2>
-            <p className="mb-6 text-lg leading-relaxed text-white/50">
-              Szenvedélyes webfejlesztők vagyunk, akik hisznek abban, hogy minden vállalkozásnak jár egy professzionális online jelenlét.
-            </p>
-            <p className="mb-12 leading-relaxed text-white/50">
-              Több mint 5 éves tapasztalattal tudjuk, mire van szükség ahhoz, hogy egy weboldal ne csak szép legyen, hanem eredményeket is hozzon.
-            </p>
+        <div className="mb-14">
+          <div className="glass mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2">
+            <span className="text-sm text-blue-700">Rólunk</span>
+          </div>
+          <h2 className="mb-8 text-4xl font-bold text-slate-900 sm:text-5xl">
+            A csapat, akinek elege lett a{" "}
+            <span className="bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
+              hónapokig tartó hitegetésből
+            </span>
+            .
+          </h2>
+        </div>
 
-            <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-              {stats.map((stat) => (
-                <div key={stat.label} className="glass-card glass-panel rounded-3xl p-5 text-center group">
-                  <div className={`relative z-10 mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${stat.accent} transition-transform duration-300 group-hover:scale-110`}>
-                    <stat.icon className="h-7 w-7 text-white" />
+        <div className="grid gap-8 lg:grid-cols-2">
+          <div className="glass-card glass-panel gradient-border rounded-3xl p-8 md:p-10">
+            <p className="mb-6 border-l-4 border-blue-300 pl-4 text-[1.15rem] leading-relaxed text-slate-800">
+              Ismered azt az érzést, amikor kifizetsz egy halom pénzt egy weboldalra, aztán a fejlesztő
+              hetekig nem veszi fel a telefont? Vagy amikor végre átadják az oldalt, de az olyan lassú,
+              hogy a vásárlóid a betöltés felénél inkább átmennek a konkurenciához?
+            </p>
+            <p className="mb-6 text-xl font-semibold leading-relaxed text-slate-900">
+              Na, nekünk pontosan ebből a <span className="text-blue-700">"piaci sztenderdből"</span> lett elegünk.
+            </p>
+            <p className="mb-6 leading-relaxed text-slate-700 md:text-[1.02rem]">
+              A Honlapholnapra nem azért jött létre, mert hiányzott még egy tucat-ügynökség a piacra,
+              akik ugyanazokat az elavult, sablonos doboz-megoldásokat (<span className="font-medium text-blue-700">khm, WordPress</span>) árulják. Azért
+              alapítottuk meg a céget, mert úgy döntöttünk: felborítjuk a játékszabályokat.
+            </p>
+            <p className="leading-relaxed text-slate-700 md:text-[1.02rem]">
+              <span className="font-semibold text-slate-900">A mi küldetésünk egyszerű:</span> Elhozzuk a világ legnagyobb tech-óriásai (mint a Netflix vagy a
+              TikTok) által használt csúcstechnológiát - a <span className="font-semibold text-blue-700">Next.js-t</span> - a te vállalkozásod számára. És
+              mindezt olyan sebességgel tesszük, ami eddig lehetetlennek tűnt az iparágban.
+            </p>
+          </div>
+
+          <div className="glass-card glass-panel gradient-border rounded-3xl p-8">
+            <h3 className="mb-6 text-2xl font-bold text-slate-900">Miért pont velünk dolgozz? (A mi garanciánk)</h3>
+            <div className="space-y-6">
+              {guarantees.map((item) => (
+                <div key={item.title} className="rounded-2xl border border-blue-100/70 bg-white/60 p-5">
+                  <div className="mb-3 flex items-center gap-3">
+                    <div
+                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${item.accent}`}
+                    >
+                      <item.icon className="h-5 w-5 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-slate-900">{item.title}</h4>
                   </div>
-                  <div className="relative z-10 text-2xl font-bold text-white">{stat.value}</div>
-                  <div className="relative z-10 mt-1 text-xs text-white/45">{stat.label}</div>
+                  <p className="leading-relaxed text-slate-700">{item.description}</p>
                 </div>
               ))}
             </div>
           </div>
+        </div>
 
-          <div className="grid gap-6 sm:grid-cols-2">
-            {values.map((value) => (
-              <div
-                key={value.title}
-                className="glass-card glass-panel gradient-border rounded-3xl p-6 transition-all duration-500 hover:bg-white/[0.06]"
-              >
-                <div className={`relative z-10 mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${value.accent}`}>
-                  <value.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="relative z-10 mb-2 text-lg font-semibold text-white">{value.title}</h3>
-                <p className="relative z-10 text-sm leading-relaxed text-white/55">{value.description}</p>
-              </div>
-            ))}
-          </div>
+        <div className="mt-10 rounded-3xl border border-blue-300/80 bg-gradient-to-r from-blue-50 via-white to-cyan-50 p-7 text-center shadow-[0_16px_44px_rgba(37,99,235,0.18)]">
+          <p className="text-lg leading-relaxed text-slate-800 md:text-xl">
+            Nem beszélünk mellé, és nem raboljuk az idődet. Ha egy olyan partnert keresel, aki a
+            megoldásokon pörög a kifogások helyett, akkor jó helyen jársz.
+          </p>
+          <p className="mt-4 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-2xl font-bold text-transparent md:text-3xl">
+            Építsük meg a jövőbiztos weboldaladat. Akár holnapra.
+          </p>
         </div>
       </div>
     </section>

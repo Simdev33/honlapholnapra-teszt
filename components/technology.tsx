@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { Search, Shield, Smartphone, Zap } from "lucide-react"
 
@@ -6,17 +6,17 @@ const technologies = [
   {
     name: "Next.js",
     description: "A legmodernebb React keretrendszer szerveroldali rendereléshez.",
-    color: "from-white to-white/70",
+    color: "from-slate-900 to-blue-700",
   },
   {
     name: "React",
     description: "A Meta által fejlesztett komponens-alapú frontend könyvtár.",
-    color: "from-[#61DAFB] to-[#61DAFB]/70",
+    color: "from-blue-700 to-indigo-500",
   },
   {
     name: "Node.js",
     description: "Gyors és skálázható backend JavaScript futtatókörnyezet.",
-    color: "from-[#68A063] to-[#68A063]/70",
+    color: "from-emerald-700 to-teal-500",
   },
 ]
 
@@ -55,15 +55,15 @@ export function Technology() {
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-20 text-center">
           <div className="glass mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2">
-            <span className="text-sm text-[#a855f7]">Technológia</span>
+            <span className="text-sm text-blue-700">Technológia</span>
           </div>
-          <h2 className="mb-6 text-4xl font-bold text-white sm:text-5xl">
+          <h2 className="mb-6 text-4xl font-bold text-slate-900 sm:text-5xl">
             Modern{" "}
-            <span className="bg-gradient-to-r from-[#7c3aed] to-[#a855f7] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
               tech stack
             </span>
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-white/50">
+          <p className="mx-auto max-w-2xl text-lg text-slate-600">
             A legújabb és legmegbízhatóbb technológiákat használjuk.
           </p>
         </div>
@@ -77,10 +77,10 @@ export function Technology() {
               <h3 className={`relative z-10 mb-4 bg-gradient-to-r text-4xl font-bold ${tech.color} bg-clip-text text-transparent`}>
                 {tech.name}
               </h3>
-              <p className="relative z-10 leading-relaxed text-white/55">{tech.description}</p>
+              <p className="relative z-10 leading-relaxed text-slate-600">{tech.description}</p>
               <div className="relative z-10 mt-6 flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-[#7c3aed]" />
-                <span className="text-sm text-[#a855f7]">Használjuk</span>
+                <div className="h-2 w-2 rounded-full bg-blue-700" />
+                <span className="text-sm text-blue-700">Használjuk</span>
               </div>
             </div>
           ))}
@@ -93,8 +93,8 @@ export function Technology() {
                 <div className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${feature.accent} transition-transform duration-300 group-hover:scale-110`}>
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-white">{feature.title}</h3>
-                <p className="text-sm text-white/55">{feature.description}</p>
+                <h3 className="mb-2 text-lg font-semibold text-slate-900">{feature.title}</h3>
+                <p className="text-sm text-slate-600">{feature.description}</p>
               </div>
             ))}
           </div>

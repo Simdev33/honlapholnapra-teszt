@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { Code2, HeartHandshake, MessageSquare, PenTool, Rocket } from "lucide-react"
 
@@ -49,15 +49,15 @@ export function Workflow() {
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-20 text-center">
           <div className="glass mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2">
-            <span className="text-sm text-[#a855f7]">Folyamat</span>
+            <span className="text-sm text-blue-700">Folyamat</span>
           </div>
-          <h2 className="mb-6 text-4xl font-bold text-white sm:text-5xl">
+          <h2 className="mb-6 text-4xl font-bold text-slate-900 sm:text-5xl">
             Így{" "}
-            <span className="bg-gradient-to-r from-[#7c3aed] to-[#a855f7] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
               dolgozunk
             </span>
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-white/50">
+          <p className="mx-auto max-w-2xl text-lg text-slate-600">
             Átlátható, gyors és hatékony folyamat az elejétől a végéig.
           </p>
         </div>
@@ -84,16 +84,16 @@ export function Workflow() {
                         <step.icon className="h-7 w-7 text-white" />
                       </div>
                       <div className={index % 2 === 1 ? "lg:text-right" : ""}>
-                        <h3 className="text-xl font-semibold text-white">{step.title}</h3>
-                        <span className="text-sm text-[#a855f7]">{step.duration}</span>
+                        <h3 className="text-xl font-semibold text-slate-900">{step.title}</h3>
+                        <span className="text-sm text-blue-700">{step.duration}</span>
                       </div>
                     </div>
-                    <p className="relative z-10 leading-relaxed text-white/55">{step.description}</p>
+                    <p className="relative z-10 leading-relaxed text-slate-600">{step.description}</p>
                   </div>
                 </div>
 
                 <div className="glass relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full glow-purple">
-                  <span className="bg-gradient-to-r from-[#7c3aed] to-[#a855f7] bg-clip-text text-xl font-bold text-transparent">
+                  <span className="bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-xl font-bold text-transparent">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>

@@ -1,83 +1,62 @@
-﻿"use client"
+"use client"
 
-import { Gauge, Globe, Palette, Search, ShoppingCart, Smartphone } from "lucide-react"
-
-const services = [
-  {
-    icon: Globe,
-    title: "Bemutatkozó oldal",
-    description: "Professzionális céges weboldal, amely bemutatja vállalkozásod és szolgáltatásaidat.",
-    accent: "from-violet-500 to-fuchsia-500 shadow-[0_16px_40px_rgba(168,85,247,0.32)]",
-  },
-  {
-    icon: ShoppingCart,
-    title: "Webshop",
-    description: "Teljes értékű e-commerce megoldás online fizetéssel és készletkezeléssel.",
-    accent: "from-indigo-500 to-violet-500 shadow-[0_16px_40px_rgba(99,102,241,0.32)]",
-  },
-  {
-    icon: Smartphone,
-    title: "Reszponzív dizájn",
-    description: "Minden eszközön tökéletesen megjelenő, mobilbarát weboldalak.",
-    accent: "from-cyan-500 to-sky-500 shadow-[0_16px_40px_rgba(34,211,238,0.28)]",
-  },
-  {
-    icon: Search,
-    title: "SEO optimalizálás",
-    description: "Keresőoptimalizált tartalom a jobb Google találati helyezésért.",
-    accent: "from-blue-500 to-indigo-500 shadow-[0_16px_40px_rgba(59,130,246,0.3)]",
-  },
-  {
-    icon: Palette,
-    title: "Egyedi dizájn",
-    description: "Márkádhoz illeszkedő, egyedi vizuális megjelenés tervezés.",
-    accent: "from-fuchsia-500 to-pink-500 shadow-[0_16px_40px_rgba(217,70,239,0.28)]",
-  },
-  {
-    icon: Gauge,
-    title: "Gyors betöltés",
-    description: "Optimalizált teljesítmény és villámgyors oldalbetöltés.",
-    accent: "from-violet-500 to-cyan-500 shadow-[0_16px_40px_rgba(124,58,237,0.28)]",
-  },
-]
+import { Clock3, Wrench } from "lucide-react"
 
 export function Services() {
   return (
     <section id="szolgaltatasok" className="relative overflow-hidden py-32">
-      <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-[#7c3aed]/10 blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="mb-20 text-center">
+        <div className="mb-12 text-center">
           <div className="glass mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2">
-            <span className="text-sm text-[#a855f7]">Szolgáltatások</span>
+            <span className="text-sm text-blue-700">Hogyan lehetséges ez?</span>
           </div>
-          <h2 className="mb-6 text-4xl font-bold text-white sm:text-5xl">
-            Minden, ami a{" "}
-            <span className="bg-gradient-to-r from-[#7c3aed] to-[#a855f7] bg-clip-text text-transparent">
-              sikerhez
-            </span>{" "}
-            kell
+          <h2 className="mb-6 text-4xl font-bold text-slate-900 sm:text-5xl">
+            A titkunk:{" "}
+            <span className="bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
+              Prémium technológia
+            </span>
+            , okos rendszerekkel.
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-white/50">
-            Teljes körű webfejlesztési szolgáltatásokat kínálunk, az ötlettől a kész weboldalig.
+          <p className="mx-auto max-w-4xl text-lg leading-relaxed text-slate-600">
+            A legtöbb ügynökség azért lassú, mert elavult rendszerekkel (pl. WordPress) küszködik, vagy
+            a nulláról kezdi a kódolást. Mi a jövő technológiájában, a Next.js-ben dolgozunk.
+            Kifejlesztettünk egy saját, sziklaszilárd és moduláris alapot, amire villámgyorsan, mégis
+            hajszálpontosan tudjuk felépíteni a te egyedi arculatodat.
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="group glass-card glass-panel gradient-border rounded-3xl p-8 transition-all duration-500 hover:bg-white/[0.06] hover:scale-[1.02]"
-            >
-              <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${service.accent} transition-transform duration-300 group-hover:scale-110`}>
-                <service.icon className="h-7 w-7 text-white" />
-              </div>
+        <div className="mb-8 text-center">
+          <h3 className="text-2xl font-bold text-slate-900 sm:text-3xl">Gyorsaság, a te igényeidre szabva:</h3>
+        </div>
 
-              <h3 className="relative z-10 mb-3 text-xl font-semibold text-white">{service.title}</h3>
-              <p className="relative z-10 leading-relaxed text-white/55">{service.description}</p>
-              <div className="relative z-10 mt-6 h-1 w-0 rounded-full bg-gradient-to-r from-[#7c3aed] to-[#a855f7] transition-all duration-500 group-hover:w-16" />
+        <div className="grid gap-8 lg:grid-cols-2">
+          <article className="glass-card glass-panel gradient-border rounded-3xl p-8">
+            <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 shadow-[0_16px_40px_rgba(249,115,22,0.35)]">
+              <Clock3 className="h-7 w-7 text-white" />
             </div>
-          ))}
+            <h4 className="mb-3 text-2xl font-bold text-slate-900">A 24 órás Expressz megoldás</h4>
+            <p className="leading-relaxed text-slate-700">
+              Egy terméket, szolgáltatást vagy eseményt akarsz azonnal piacra dobni? Szükséged van egy
+              profi bemutatkozó oldalra vagy landing page-re? Ha az anyagok (szövegek, képek)
+              rendelkezésre állnak, a megbeszéléstől számított 24 órán belül élesítjük a kész,
+              Google-barát oldaladat.
+            </p>
+          </article>
+
+          <article className="glass-card glass-panel gradient-border rounded-3xl p-8">
+            <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-700 to-cyan-600 shadow-[0_16px_40px_rgba(37,99,235,0.35)]">
+              <Wrench className="h-7 w-7 text-white" />
+            </div>
+            <h4 className="mb-3 text-2xl font-bold text-slate-900">Komplex és egyedi rendszerek</h4>
+            <p className="leading-relaxed text-slate-700">
+              Webshopot, egyedi ügyfélportált vagy többszáz aloldalas cégbemutatót szeretnél? Ezeknél a
+              projekteknél a precizitás és az összetettség miatt több időre van szükségünk. De
+              garantáljuk: a Next.js alapoknak köszönhetően ezeket is a piaci átlagnál jóval gyorsabban
+              és stabilabban adjuk át. Nálunk nincsenek hónapokig csúszó határidők.
+            </p>
+          </article>
         </div>
       </div>
     </section>
