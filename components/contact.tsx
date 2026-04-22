@@ -10,13 +10,44 @@ const inputClassName =
 export function Contact() {
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setSubmitError(null)
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setIsSubmitting(false)
-    router.push("/koszonjuk")
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    const payload = {
+      name: String(formData.get("name") ?? "").trim(),
+      email: String(formData.get("email") ?? "").trim(),
+      phone: String(formData.get("phone") ?? "").trim(),
+      budget: String(formData.get("budget") ?? "").trim(),
+      project: String(formData.get("project") ?? "").trim(),
+      message: String(formData.get("message") ?? "").trim(),
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      })
+
+      if (!response.ok) {
+        throw new Error("A küldés sikertelen volt.")
+      }
+
+      form.reset()
+      router.push("/koszonjuk")
+    } catch (_error) {
+      setSubmitError("Valami hiba történt küldés közben. Kérlek próbáld újra.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
@@ -31,8 +62,8 @@ export function Contact() {
     {
       icon: Phone,
       title: "Telefon",
-      value: "+36 30 123 4567",
-      href: "tel:+36301234567",
+      value: "+36 30 194 0601",
+      href: "tel:+36301940601",
       iconClass:
         "bg-gradient-to-br from-cyan-600 to-sky-500 shadow-[0_16px_40px_rgba(6,182,212,0.32)]",
     },
@@ -112,7 +143,7 @@ export function Contact() {
                     <label htmlFor="name" className="mb-2 block text-sm font-medium text-slate-800">
                       Név *
                     </label>
-                    <input id="name" required placeholder="Kovács János" className={`${inputClassName} h-12 px-4`} />
+                    <input id="name" name="name" required placeholder="Kovács János" className={`${inputClassName} h-12 px-4`} />
                   </div>
                   <div>
                     <label htmlFor="email" className="mb-2 block text-sm font-medium text-slate-800">
@@ -120,6 +151,7 @@ export function Contact() {
                     </label>
                     <input
                       id="email"
+                      name="email"
                       type="email"
                       required
                       placeholder="janos@example.com"
@@ -133,7 +165,7 @@ export function Contact() {
                     <label htmlFor="phone" className="mb-2 block text-sm font-medium text-slate-800">
                       Telefon
                     </label>
-                    <input id="phone" type="tel" placeholder="+36 30 123 4567" className={`${inputClassName} h-12 px-4`} />
+                    <input id="phone" name="phone" type="tel" placeholder="+36 30 194 0601" className={`${inputClassName} h-12 px-4`} />
                   </div>
                   <div>
                     <label htmlFor="budget" className="mb-2 block text-sm font-medium text-slate-800">
@@ -141,6 +173,7 @@ export function Contact() {
                     </label>
                     <input
                       id="budget"
+                      name="budget"
                       placeholder="pl. 200.000 - 300.000 Ft"
                       className={`${inputClassName} h-12 px-4`}
                     />
@@ -153,6 +186,7 @@ export function Contact() {
                   </label>
                   <input
                     id="project"
+                    name="project"
                     placeholder="pl. bemutatkozó oldal, webshop..."
                     className={`${inputClassName} h-12 px-4`}
                   />
@@ -164,6 +198,7 @@ export function Contact() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     required
                     rows={5}
                     placeholder="Írd le röviden, milyen weboldalt szeretnél..."
@@ -185,6 +220,7 @@ export function Contact() {
                     </>
                   )}
                 </button>
+                {submitError ? <p className="text-sm font-medium text-rose-600">{submitError}</p> : null}
               </form>
             </div>
           </div>
