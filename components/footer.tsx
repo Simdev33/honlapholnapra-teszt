@@ -17,11 +17,6 @@ const navigation = {
     { name: "Technológia", href: "#technologia" },
     { name: "Árak", href: "#arak" },
   ],
-  legal: [
-    { name: "Adatvédelem", href: "#" },
-    { name: "ÁSZF", href: "#" },
-    { name: "Cookie szabályzat", href: "#" },
-  ],
 }
 
 export function Footer() {
@@ -31,7 +26,7 @@ export function Footer() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 lg:py-20">
         <div className="glass glass-panel rounded-3xl px-8 py-10 md:px-10 md:py-12">
-          <div className="relative z-10 grid gap-12 lg:grid-cols-4">
+          <div className="relative z-10 grid gap-12 lg:grid-cols-3">
             <div>
               <Link href="/" className="group inline-flex items-center gap-3">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10 transition-opacity group-hover:opacity-90">
@@ -97,18 +92,6 @@ export function Footer() {
               </ul>
             </div>
 
-            <div>
-              <h3 className="mb-6 font-semibold text-slate-900">Jogi</h3>
-              <ul className="space-y-4">
-                {navigation.legal.map((item) => (
-                  <li key={item.name}>
-                    <Link href={item.href} className="text-sm text-slate-600 transition-colors hover:text-slate-900">
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
 
