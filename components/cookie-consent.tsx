@@ -60,13 +60,13 @@ export function CookieConsent() {
             </div>
           </div>
           <div className="min-w-0 flex-1 text-center sm:text-left">
-            <h2 id="cookie-consent-title" className="mb-1 text-sm font-semibold text-white sm:text-base">
+            <h2 id="cookie-consent-title" className="mb-1 text-sm font-semibold text-slate-900 sm:text-base">
               Sütik (cookie-k)
             </h2>
-            <p id="cookie-consent-desc" className="text-sm leading-relaxed text-white/55">
+            <p id="cookie-consent-desc" className="text-sm leading-relaxed text-slate-600">
               A weboldal működéséhez szükséges sütiket használunk, és — ha elfogadod — anonim látogatási
               statisztikát is (pl. oldalmegtekintések). Részletek az{" "}
-              <Link href="#" className="text-[#a855f7] underline-offset-2 hover:text-[#c084fc] hover:underline">
+              <Link href="#" className="text-blue-700 underline-offset-2 hover:text-blue-800 hover:underline">
                 adatvédelmi tájékoztatóban
               </Link>
               .
@@ -83,7 +83,7 @@ export function CookieConsent() {
             <button
               type="button"
               onClick={() => save("essential")}
-              className="glass-button rounded-xl px-4 py-2.5 text-sm font-medium text-white"
+              className="glass-button rounded-xl px-4 py-2.5 text-sm font-medium text-slate-800"
             >
               Csak szükséges
             </button>

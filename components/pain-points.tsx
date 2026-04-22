@@ -1,6 +1,6 @@
 "use client"
 
-import { Gauge, Search, Zap } from "lucide-react"
+import { Gauge, LifeBuoy, Search, Zap } from "lucide-react"
 
 const painPoints = [
   {
@@ -27,6 +27,15 @@ const painPoints = [
       "Hiába gyors az oldal, ha láthatatlan. Az általunk írt tiszta kód már az alapoktól kezdve a Google kedvence. Nálunk nem kell utólag százezreket költened technikai SEO-ra.",
     accent: "from-violet-600 to-fuchsia-500 shadow-[0_16px_40px_rgba(139,92,246,0.28)]",
   },
+  {
+    icon: LifeBuoy,
+    problem: 'A probléma: "Azt sem tudom, hogyan kezdjek hozzá, teljesen elvesztem a technikai részletekben."',
+    solutionTitle: "A mi megoldásunk: Teljes körű mentorálás és technikai kivitelezés a nulláról.",
+    solution:
+      'Levesszük a válladról a technikai terhet. Segítünk a megfelelő domain név kiválasztásától a céges e-mail címek létrehozásán át egészen az oldal élesítéséig. Nálunk nincs "buta kérdés": mindent beállítunk és elmagyarázunk közérthetően, hogy neked csak az üzleteddel kelljen foglalkoznod.',
+    accent: "from-emerald-600 to-lime-500 shadow-[0_16px_40px_rgba(16,185,129,0.3)]",
+    emphasis: "border-emerald-200/80 bg-emerald-50/25",
+  },
 ]
 
 export function PainPoints() {
@@ -50,9 +59,12 @@ export function PainPoints() {
           </p>
         </div>
 
-        <div className="grid gap-7 lg:grid-cols-3">
+        <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-4">
           {painPoints.map((item) => (
-            <article key={item.problem} className="glass-card glass-panel gradient-border rounded-3xl p-8">
+            <article
+              key={item.problem}
+              className={`glass-card glass-panel gradient-border rounded-3xl p-8 ${item.emphasis ?? ""}`}
+            >
               <div
                 className={`mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${item.accent}`}
               >
