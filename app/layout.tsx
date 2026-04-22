@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Inter, Space_Grotesk } from "next/font/google"
+import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
 import { CookieConsent } from "@/components/cookie-consent"
 import "./globals.css"
@@ -31,8 +32,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID
+  const gtagId = gaMeasurementId || googleAdsId
+
   return (
     <html lang="hu">
+      {gtagId ? (
+        <>
+          <Script src={`https://www.googletagmanager.com/gtag/js?id=${gtagId}`} strategy="afterInteractive" />
+          <Script id="google-gtag-init" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('js', new Date());
+              ${gaMeasurementId ? `gtag('config', '${gaMeasurementId}');` : ""}
+              ${googleAdsId ? `gtag('config', '${googleAdsId}');` : ""}
+            `}
+          </Script>
+        </>
+      ) : null}
       <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased`}>
         {children}
         <CookieConsent />

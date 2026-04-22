@@ -1,21 +1,22 @@
 "use client"
 
 import { useState } from "react"
-import { CheckCircle, Mail, MapPin, Phone, Send } from "lucide-react"
+import { useRouter } from "next/navigation"
+import { Mail, Phone, Send } from "lucide-react"
 
 const inputClassName =
   "glass-input w-full rounded-xl text-slate-900 placeholder:text-slate-400 focus:outline-none"
 
 export function Contact() {
+  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     await new Promise((resolve) => setTimeout(resolve, 1000))
     setIsSubmitting(false)
-    setIsSubmitted(true)
+    router.push("/koszonjuk")
   }
 
   const contactInfo = [
@@ -34,14 +35,6 @@ export function Contact() {
       href: "tel:+36301234567",
       iconClass:
         "bg-gradient-to-br from-cyan-600 to-sky-500 shadow-[0_16px_40px_rgba(6,182,212,0.32)]",
-    },
-    {
-      icon: MapPin,
-      title: "Iroda",
-      value: "1052 Budapest, Váci utca 1.",
-      href: "#",
-      iconClass:
-        "bg-gradient-to-br from-rose-500 to-amber-500 shadow-[0_16px_40px_rgba(244,63,94,0.28)]",
     },
   ] as const
 
@@ -113,104 +106,86 @@ export function Contact() {
 
           <div className="lg:col-span-3">
             <div className="glass glass-panel gradient-border rounded-3xl border-t border-t-cyan-400/25 p-8 md:p-10">
-              {isSubmitted ? (
-                <div className="relative z-10 flex min-h-[400px] flex-col items-center justify-center text-center">
-                  <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 shadow-[0_18px_46px_rgba(16,185,129,0.35)]">
-                    <CheckCircle className="h-10 w-10 text-white" />
-                  </div>
-                  <h3 className="mb-4 text-2xl font-bold text-slate-900">Köszönjük az üzenetet!</h3>
-                  <p className="mb-8 max-w-sm text-slate-600">
-                    24 órán belül felvesszük veled a kapcsolatot.
-                  </p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="glass-button rounded-xl px-6 py-3 font-medium text-slate-900"
-                  >
-                    Új üzenet küldése
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="relative z-10 space-y-6">
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="name" className="mb-2 block text-sm font-medium text-slate-800">
-                        Név *
-                      </label>
-                      <input id="name" required placeholder="Kovács János" className={`${inputClassName} h-12 px-4`} />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="mb-2 block text-sm font-medium text-slate-800">
-                        Email *
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        required
-                        placeholder="janos@example.com"
-                        className={`${inputClassName} h-12 px-4`}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="phone" className="mb-2 block text-sm font-medium text-slate-800">
-                        Telefon
-                      </label>
-                      <input id="phone" type="tel" placeholder="+36 30 123 4567" className={`${inputClassName} h-12 px-4`} />
-                    </div>
-                    <div>
-                      <label htmlFor="budget" className="mb-2 block text-sm font-medium text-slate-800">
-                        Költségkeret
-                      </label>
-                      <input
-                        id="budget"
-                        placeholder="pl. 200.000 - 300.000 Ft"
-                        className={`${inputClassName} h-12 px-4`}
-                      />
-                    </div>
-                  </div>
-
+              <form onSubmit={handleSubmit} className="relative z-10 space-y-6">
+                <div className="grid gap-6 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="project" className="mb-2 block text-sm font-medium text-slate-800">
-                      Projekt típusa
+                    <label htmlFor="name" className="mb-2 block text-sm font-medium text-slate-800">
+                      Név *
+                    </label>
+                    <input id="name" required placeholder="Kovács János" className={`${inputClassName} h-12 px-4`} />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="mb-2 block text-sm font-medium text-slate-800">
+                      Email *
                     </label>
                     <input
-                      id="project"
-                      placeholder="pl. bemutatkozó oldal, webshop..."
+                      id="email"
+                      type="email"
+                      required
+                      placeholder="janos@example.com"
                       className={`${inputClassName} h-12 px-4`}
                     />
                   </div>
+                </div>
 
+                <div className="grid gap-6 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="message" className="mb-2 block text-sm font-medium text-slate-800">
-                      Üzenet *
+                    <label htmlFor="phone" className="mb-2 block text-sm font-medium text-slate-800">
+                      Telefon
                     </label>
-                    <textarea
-                      id="message"
-                      required
-                      rows={5}
-                      placeholder="Írd le röviden, milyen weboldalt szeretnél..."
-                      className={`${inputClassName} resize-none px-4 py-3`}
+                    <input id="phone" type="tel" placeholder="+36 30 123 4567" className={`${inputClassName} h-12 px-4`} />
+                  </div>
+                  <div>
+                    <label htmlFor="budget" className="mb-2 block text-sm font-medium text-slate-800">
+                      Költségkeret
+                    </label>
+                    <input
+                      id="budget"
+                      placeholder="pl. 200.000 - 300.000 Ft"
+                      className={`${inputClassName} h-12 px-4`}
                     />
                   </div>
+                </div>
 
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="gradient-purple glow-purple inline-flex items-center gap-2 rounded-2xl px-8 py-4 font-semibold text-white transition-all hover:opacity-90 disabled:opacity-50"
-                  >
-                    {isSubmitting ? (
-                      "Küldés..."
-                    ) : (
-                      <>
-                        <Send className="h-5 w-5" />
-                        Üzenet küldése
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
+                <div>
+                  <label htmlFor="project" className="mb-2 block text-sm font-medium text-slate-800">
+                    Projekt típusa
+                  </label>
+                  <input
+                    id="project"
+                    placeholder="pl. bemutatkozó oldal, webshop..."
+                    className={`${inputClassName} h-12 px-4`}
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="mb-2 block text-sm font-medium text-slate-800">
+                    Üzenet *
+                  </label>
+                  <textarea
+                    id="message"
+                    required
+                    rows={5}
+                    placeholder="Írd le röviden, milyen weboldalt szeretnél..."
+                    className={`${inputClassName} resize-none px-4 py-3`}
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="gradient-purple glow-purple inline-flex items-center gap-2 rounded-2xl px-8 py-4 font-semibold text-white transition-all hover:opacity-90 disabled:opacity-50"
+                >
+                  {isSubmitting ? (
+                    "Küldés..."
+                  ) : (
+                    <>
+                      <Send className="h-5 w-5" />
+                      Üzenet küldése
+                    </>
+                  )}
+                </button>
+              </form>
             </div>
           </div>
         </div>
