@@ -120,16 +120,8 @@ export function Contact() {
               </h3>
               <div className="relative z-10 space-y-4">
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-500">Hétfő - Péntek</span>
-                  <span className="font-medium text-slate-800">9:00 - 18:00</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-slate-500">Szombat</span>
-                  <span className="font-medium text-slate-800">10:00 - 14:00</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-slate-500">Vasárnap</span>
-                  <span className="font-medium text-rose-600">Zárva</span>
+                  <span className="text-slate-500">Hétfő - Vasárnap</span>
+                  <span className="font-medium text-slate-800">0:00 - 24:00</span>
                 </div>
               </div>
             </div>
