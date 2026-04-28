@@ -6,7 +6,7 @@ import { scrollToSectionHash } from "@/lib/scroll-to-section"
 const plans = [
   {
     name: "Alap",
-    price: "149.000",
+    price: "99.000",
     description: "Tökéletes induláshoz kis vállalkozásoknak.",
     duration: "1-2 nap",
     features: [
@@ -21,7 +21,7 @@ const plans = [
   },
   {
     name: "Professzionális",
-    price: "299.000",
+    price: "199.000",
     description: "Ideális növekvő vállalkozásoknak.",
     duration: "3-5 nap",
     features: [
@@ -38,7 +38,7 @@ const plans = [
   },
   {
     name: "Prémium",
-    price: "499.000+",
+    price: "399.000+",
     description: "Komplex projektekhez és webshopokhoz.",
     duration: "1-2 hét",
     features: [
