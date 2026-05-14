@@ -1,0 +1,287 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Home 8 Countup CSS
+----------------------------------------*/
+.h8-countup-section {
+	position: relative;
+	z-index: 1;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -600px;
+		width: 900px;
+		height: 900px;
+		border-radius: 50%;
+		background: var(--tj-color-theme-primary);
+		-webkit-filter: blur(100px);
+		filter: blur(100px);
+		opacity: 0.2;
+		z-index: -1;
+		backdrop-filter: blur(10px);
+		@media #{$md,$sm,$xs} {
+			top: 10%;
+			left: -500px;
+			width: 700px;
+			height: 700px;
+		}
+	}
+	.blur-shap {
+		position: absolute;
+		right: 0;
+		bottom: -75%;
+		max-width: 690px;
+		width: 100%;
+		height: auto;
+		z-index: -1;
+		pointer-events: none;
+		@media #{$lg} {
+			max-width: 450px;
+		}
+		@media #{$md,$sm,$xs} {
+			max-width: 400px;
+			bottom: -40%;
+		}
+	}
+	@media #{$md,$sm,$xs} {
+		padding-top: 70px;
+	}
+}
+.h8-countup-heading {
+	max-width: 1100px;
+	text-align: center;
+	.sec-logo {
+		width: 116px;
+		height: 116px;
+		border-radius: 50%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--tj-color-theme-dark);
+		box-shadow: 0 0 45px rgba(236, 131, 187, 0.6);
+		position: relative;
+		margin-bottom: 60px;
+		&::before {
+			content: "";
+			width: calc(100% + 4px);
+			height: calc(100% + 4px);
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			background-image: linear-gradient(
+				to right,
+				rgba(255, 0, 127, 1),
+				rgba(102, 122, 255, 1)
+			);
+			border-radius: 50%;
+			z-index: -1;
+			animation: rotateClock 2s linear infinite;
+		}
+		&::after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			box-shadow: 0 0 45px rgba(62, 36, 135, 1);
+			border-radius: 50%;
+			z-index: -2;
+		}
+		img {
+			max-width: 54px;
+			height: auto;
+			@media #{$xs} {
+				max-width: 44px;
+			}
+		}
+		@media #{$md,$sm,$xs} {
+			margin-bottom: 45px;
+		}
+		@media #{$xs} {
+			width: 110px;
+			height: 110px;
+		}
+	}
+	.sec-title {
+		span {
+			color: inherit;
+			width: 54px;
+			height: 54px;
+			position: relative;
+			top: 8px;
+			display: inline-block;
+			cursor: pointer;
+			&.img-1 {
+				width: 172px;
+				@media #{$lg} {
+					width: 144px;
+				}
+				@media #{$md, $sm} {
+					width: 128px;
+				}
+				@media #{$xs} {
+					width: 96px;
+				}
+			}
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				max-width: 100%;
+				width: 100%;
+				height: 100%;
+				border-radius: 56px;
+				@include transition(all 0.3s linear 0s);
+			}
+			@media #{$lg} {
+				width: 45px;
+				height: 45px;
+			}
+			@media #{$md, $sm} {
+				width: 40px;
+				height: 40px;
+			}
+			@media #{$xs} {
+				width: 30px;
+				height: 30px;
+			}
+			&:hover {
+				img {
+					transform: scale(2);
+					border-radius: 6px;
+				}
+			}
+		}
+	}
+}
+
+.h8-countup-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border-top: 1px solid var(--tj-color-border-1);
+	border-bottom: 1px solid var(--tj-color-border-1);
+	padding: 48px 0;
+	margin-bottom: 60px;
+	.countup-item {
+		padding: 0;
+		align-items: flex-start;
+		position: relative;
+		&:not(:last-child) {
+			padding-inline-end: 103px;
+			@media #{$xl} {
+				padding-inline-end: 72px;
+			}
+			@media #{$lg} {
+				padding-inline-end: 42px;
+			}
+			&::before {
+				content: "";
+				width: auto;
+				height: calc(100% - 15px);
+				position: absolute;
+				top: 9px;
+				right: 0;
+				border-right: 1px solid var(--tj-color-border-1);
+			}
+		}
+		&:not(:first-child) {
+			padding-inline-start: 102px;
+			position: relative;
+			z-index: 0;
+			@media #{$xl} {
+				padding-inline-start: 72px;
+			}
+			@media #{$lg} {
+				padding-inline-start: 42px;
+			}
+		}
+
+		.count-text {
+			max-width: 205px;
+			font-size: 16px;
+			font-family: var(--tj-ff-body);
+			font-weight: normal;
+			color: var(--tj-color-text-body);
+		}
+		.count-plus {
+			span {
+				color: var(--tj-color-theme-primary);
+			}
+		}
+		.inline-content {
+			font-size: 68px;
+			color: var(--tj-color-heading-primary);
+			margin-bottom: 15px;
+			.odometer {
+				color: var(--tj-color-heading-primary);
+				.odometer-digit,
+				span {
+					color: var(--tj-color-heading-primary);
+				}
+			}
+			@media #{$xs} {
+				margin-bottom: 5px;
+			}
+		}
+		@media #{$md, $sm} {
+			width: 50%;
+			&:nth-child(odd) {
+				padding-inline-start: 0;
+				padding-inline-end: 0;
+			}
+			&:nth-child(even) {
+				padding-inline-start: 30px;
+				padding-inline-end: 0;
+				border-right: 0;
+				&::before {
+					border-right: 0;
+				}
+			}
+			&:nth-child(2),
+			&:first-child {
+				margin-bottom: 80px;
+				&::after {
+					content: "";
+					width: 100%;
+					height: 1px;
+					background-color: var(--tj-color-border-1);
+					position: absolute;
+					bottom: -40px;
+					left: 0;
+				}
+			}
+		}
+		@media #{$xs} {
+			width: 100%;
+			text-align: start;
+			&:not(:last-child) {
+				padding-inline-end: 0;
+				padding-bottom: 30px;
+				border-right: 0;
+				border-bottom: 1px solid var(--tj-color-border-1);
+				&::before {
+					border-right: 0;
+				}
+			}
+			&:not(:first-child) {
+				padding-inline-start: 0;
+				padding-top: 25px;
+			}
+		}
+	}
+	@media #{$md, $sm} {
+		padding: 40px 0;
+		margin-bottom: 40px;
+	}
+	@media #{$xs} {
+		max-width: 100%;
+		padding: 30px 0;
+		margin-bottom: 40px;
+	}
+}
+
+/* !END: Home 8 Countup CSS  */

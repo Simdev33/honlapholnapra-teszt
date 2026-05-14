@@ -5,18 +5,17 @@ import { Clock3, Wrench } from "lucide-react"
 export function Services() {
   return (
     <section id="szolgaltatasok" className="relative overflow-hidden py-32">
-      <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#090326] via-[#080320] to-[#07021a]" />
+      <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-orange-400/12 blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-12 text-center">
           <div className="glass mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2">
-            <span className="text-sm text-blue-700">Hogyan lehetséges ez?</span>
+            <span className="text-sm text-orange-600">Hogyan lehetséges ez?</span>
           </div>
           <h2 className="mb-6 text-4xl font-bold text-slate-900 sm:text-5xl">
             A titkunk:{" "}
-            <span className="bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
-              Prémium technológia
-            </span>
+            <span className="text-fuchsia-300">Prémium technológia</span>
             , okos rendszerekkel.
           </h2>
           <p className="mx-auto max-w-4xl text-lg leading-relaxed text-slate-600">
@@ -32,7 +31,7 @@ export function Services() {
         </div>
 
         <div className="grid gap-8 lg:grid-cols-2">
-          <article className="glass-card glass-panel gradient-border rounded-3xl p-8">
+          <article className="glass-card glass-panel gradient-border rounded-3xl p-8" style={{ background: "#160826" }}>
             <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 shadow-[0_16px_40px_rgba(249,115,22,0.35)]">
               <Clock3 className="h-7 w-7 text-white" />
             </div>
@@ -45,8 +44,8 @@ export function Services() {
             </p>
           </article>
 
-          <article className="glass-card glass-panel gradient-border rounded-3xl p-8">
-            <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-700 to-cyan-600 shadow-[0_16px_40px_rgba(37,99,235,0.35)]">
+          <article className="glass-card glass-panel gradient-border rounded-3xl p-8" style={{ background: "#160826" }}>
+            <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-900 to-blue-700 shadow-[0_16px_40px_rgba(15,23,42,0.28)]">
               <Wrench className="h-7 w-7 text-white" />
             </div>
             <h4 className="mb-3 text-2xl font-bold text-slate-900">Komplex és egyedi rendszerek</h4>

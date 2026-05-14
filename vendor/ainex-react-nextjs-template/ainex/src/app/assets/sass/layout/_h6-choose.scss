@@ -1,0 +1,37 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Choose CSS
+----------------------------------------*/
+.choose-box {
+	&.style-4 {
+		border-radius: 12px;
+		overflow: visible;
+		&::before {
+			background: var(--tj-color-theme-primary);
+			box-shadow: 0 0 15px rgba(255, 0, 127, 0.7);
+			border-radius: 12px;
+		}
+		.choose-inner {
+			text-align: center;
+			padding: 42px 28px;
+			@media #{$xl, $lg, $md} {
+				padding: 30px 20px;
+			}
+			@media #{$sm, $xs} {
+				padding: 30px 15px;
+			}
+		}
+		.title {
+			margin-inline-start: auto;
+			margin-inline-end: auto;
+		}
+		&:hover {
+			.desc {
+				color: var(--tj-color-common-white);
+			}
+		}
+	}
+}
+
+/* !END: Choose CSS */

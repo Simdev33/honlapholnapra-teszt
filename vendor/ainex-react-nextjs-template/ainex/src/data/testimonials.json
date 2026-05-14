@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"authorName": "Ellina Fienne",
+		"authorDesig": "Python Expert",
+		"img": "/images/testimonial/client-1.webp",
+		"img2": "/images/testimonial/client-4.webp",
+		"desc": "Working with Ainex has been a game-changer for us. Their AI solutions helped streamline our operations, resulting in a 30% increase in efficiency within just three months. We couldn’t be happier with the results. They truly understood our challenges and provided a tailored AI solution that our expectations.",
+		"desc2": "Working with Ainex has been a game-changer for us. Their AI solutions helped streamline our operations, resulting in a 30% increase in efficiency within just three months. We couldn’t be happier with the results. They truly understood.",
+		"desc3": "Working with Ainex has been a game-changer for us. Their AI solutions helped streamline our operations, resulting in a 30% increase in efficiency within just three months. We couldn’t be They truly understood our challenges and provided a tailored that our expectations."
+	},
+	{
+		"id": 2,
+		"authorName": "Ralph Edwards",
+		"authorDesig": "Co. Founder",
+		"img": "/images/testimonial/client-2.webp",
+		"img2": "/images/testimonial/client-2.webp",
+		"desc": "Working with Ainex has been a game-changer for us. Their AI solutions helped streamline our operations, resulting in a 30% increase in efficiency within just three months. We couldn’t be happier with the results. They truly understood our challenges and provided a tailored AI solution that our expectations.",
+		"desc2": "Working with Ainex has been a game-changer for us. Their AI solutions helped streamline our operations, resulting in a 30% increase in efficiency within just three months. We couldn’t be happier with the results. They truly understood.",
+		"desc3": "Working with Ainex has been a game-changer for us. Their AI solutions helped streamline our operations, resulting in a 30% increase in efficiency within just three months. We couldn’t be happier. They truly understood our challenges and provided a tailored AI solution."
+	},
+	{
+		"id": 3,
+		"authorName": "Devon Lane",
+		"authorDesig": "Co. Founder",
+		"img": "/images/testimonial/client-3.webp",
+		"img2": "/images/testimonial/client-3.webp",
+		"desc": "Working with Ainex has been a game-changer for us. Their AI solutions helped streamline our operations, resulting in a 30% increase in efficiency within just three months. We couldn’t be happier with the results. They truly understood our challenges and provided a tailored AI solution that our expectations.",
+		"desc2": "Working with Ainex has been a game-changer for us. Their AI solutions helped streamline our operations, resulting in a 30% increase in efficiency within just three months. We couldn’t be happier with the results. They truly understood.",
+		"desc3": "Working with Ainex has been a game-changer for us. Their AI solutions helped streamline our operations, resulting in a 30% increase in efficiency within just three months. We couldn’t be happier with the results. They truly understood our challenges and provided."
+	}
+]

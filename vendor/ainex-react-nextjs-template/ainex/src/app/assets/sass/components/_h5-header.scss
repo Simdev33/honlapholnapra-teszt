@@ -1,0 +1,87 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Header CSS
+----------------------------------------*/
+.header-area.header-5 {
+	&.header-absolute {
+		position: absolute;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+		padding: 30px 38px 0 38px;
+		@media #{$xxl, $xl} {
+			padding: 30px 18px 0 18px;
+		}
+		@media #{$lg} {
+			padding: 20px 8px 0 8px;
+		}
+		@media #{$md, $sm, $xs} {
+			padding: 0;
+		}
+	}
+	.site_logo {
+		.logo {
+			padding: 11px 20px;
+			background-color: var(--tj-color-theme-bg);
+			border-radius: 40px;
+		}
+	}
+	.menu-area {
+		padding: 0 35px;
+		background-color: var(--tj-color-theme-bg);
+		border-radius: 40px;
+		@media #{$lg} {
+			padding: 0 20px;
+		}
+	}
+	.mainmenu {
+		> ul {
+			> li {
+				> a {
+					padding-top: 17px;
+					padding-bottom: 18px;
+				}
+				&.menu-item-has-children,
+				&.has-dropdown {
+					> a {
+						&::after {
+							top: 21px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.header-right-item {
+		gap: 15px;
+	}
+	.header-search {
+		.search {
+			background-color: var(--tj-color-theme-bg);
+			border-radius: 40px;
+			padding: 12px 24px 12px 16px;
+			@media #{$lg, $md, $sm, $xs} {
+				padding: 12px;
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+	&.sticky {
+		padding: 25px 38px;
+		@media #{$xxl, $xl} {
+			padding: 25px 18px;
+		}
+		@media #{$lg} {
+			padding: 20px 8px;
+		}
+		@media #{$md, $sm, $xs} {
+			padding: 0;
+		}
+	}
+}
+
+/* !END: Theme Header CSS */

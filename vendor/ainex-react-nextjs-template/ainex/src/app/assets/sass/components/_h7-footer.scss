@@ -1,0 +1,207 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Footer CSS
+----------------------------------------*/
+.footer-7 {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	.footer-main-area {
+		padding: 110px 0 90px;
+		@media #{$lg} {
+			padding: 90px 0 70px;
+		}
+		@media #{$md, $sm, $xs} {
+			padding: 70px 0 50px;
+		}
+	}
+	.footer-big-logo {
+		max-width: 1000px;
+		width: 100%;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+
+		@media #{$xl, $lg} {
+			max-width: 900px;
+		}
+		@media #{$md} {
+			max-width: 800px;
+		}
+		@media #{$md, $sm, $xs} {
+			padding: 0 15px;
+		}
+	}
+
+	.widget-nav-menu {
+		ul {
+			li {
+				a {
+					color: var(--tj-color-white-2);
+					font-family: var(--tj-ff-heading);
+					&::before {
+						border: 0;
+						background-color: var(--tj-color-common-white);
+						opacity: 0.15;
+					}
+					&:hover {
+						color: var(--tj-color-common-white);
+						&::before {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+		&.footer-col-2 {
+			padding-inline-start: 30px;
+			@media #{$lg, $md} {
+				padding-inline-start: 40px;
+			}
+			@media #{$sm, $xs} {
+				margin-top: 30px;
+				padding-inline-start: 0;
+			}
+		}
+		&.footer-col-3 {
+			padding-inline-start: 55px;
+			@media #{$lg, $md, $sm, $xs} {
+				padding-inline-start: 0;
+			}
+		}
+		&.footer-col-4 {
+			padding-inline-start: 40px;
+			@media #{$lg, $md} {
+				margin-top: 30px;
+			}
+			@media #{$sm, $xs} {
+				margin-top: 30px;
+				padding-inline-start: 0;
+			}
+		}
+	}
+	.shape-1 {
+		position: absolute;
+		width: 300px;
+		right: -92px;
+		bottom: 22%;
+		z-index: -1;
+		animation: zoomEffect 4s linear infinite;
+		img {
+			transform: scaleX(-1) rotate(-10deg);
+		}
+		@media #{$xl, lg} {
+			width: 280px;
+			bottom: 25%;
+		}
+		@media #{$md, $sm} {
+			width: 240px;
+			right: -60px;
+		}
+		@media #{$xs} {
+			width: 200px;
+			right: -60px;
+			bottom: 20%;
+		}
+	}
+
+	@media #{$sm, $xs} {
+		margin-inline-start: 15px;
+		margin-inline-end: 15px;
+	}
+}
+.footer-widget {
+	.cta-title {
+		max-width: 410px;
+		width: 100%;
+		font-size: 76px;
+		line-height: 1.053;
+		margin-bottom: 0;
+		a {
+			background-image: linear-gradient(
+				to bottom,
+				currentColor 0%,
+				currentColor 100%
+			);
+			background-size: 100% 4px;
+			background-repeat: no-repeat;
+			background-position: 0 82%;
+			display: inline;
+			@include transition(all 0.5s ease-in-out 0s);
+			&:hover {
+				background-size: 0 4px;
+				@media #{$md, $sm, $xs} {
+					background-size: 0 3px;
+				}
+				+ span {
+					animation: bounceTwice 0.6s linear 0.2s;
+				}
+			}
+			@media #{$md, $sm, $xs} {
+				background-size: 100% 3px;
+			}
+		}
+		span {
+			width: 66px;
+			height: 66px;
+			background-color: var(--tj-color-theme-primary);
+			border-radius: 50%;
+			font-size: 32px;
+			color: var(--tj-color-common-white);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			top: -10px;
+			margin-inline-start: 20px;
+			@media #{$md, $sm} {
+				width: 55px;
+				height: 55px;
+				top: -8px;
+				font-size: 28px;
+				margin-inline-start: 15px;
+			}
+			@media #{$xs} {
+				width: 50px;
+				height: 50px;
+				top: -4px;
+				font-size: 26px;
+				margin-inline-start: 15px;
+			}
+		}
+		@media #{$md, $sm} {
+			font-size: 60px;
+		}
+		@media #{$xs} {
+			max-width: 300px;
+			font-size: 50px;
+		}
+	}
+}
+
+.tj-copyright-area-5 {
+	border-top: 1px solid rgb(255, 255, 255, 0.2);
+	.copyright-content-area {
+		padding: 27px 0;
+	}
+	.copyright-text {
+		color: var(--tj-color-common-white);
+		a {
+			color: var(--tj-color-common-white);
+		}
+	}
+	.copyright-menu {
+		ul {
+			li {
+				&::before {
+					background-color: var(--tj-color-common-white);
+				}
+				a {
+					color: var(--tj-color-common-white);
+				}
+			}
+		}
+	}
+}
+
+/* !END: Theme Footer CSS */

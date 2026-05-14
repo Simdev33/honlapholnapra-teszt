@@ -1,0 +1,32 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Client CSS
+----------------------------------------*/
+.h5-client-slider {
+	&::before,
+	&::after {
+		display: none;
+	}
+	.client-logo {
+		width: 279px;
+		height: 118px;
+		background-color: transparent;
+		border: 1px solid var(--tj-color-border-1);
+		img {
+			opacity: 1;
+		}
+
+		@media #{$xl, $lg, $md} {
+			width: 220px;
+			height: 100px;
+		}
+		@media #{$sm, $xs} {
+			width: 170px;
+			height: 70px;
+			padding: 15px;
+		}
+	}
+}
+
+/* !END: Client CSS */
