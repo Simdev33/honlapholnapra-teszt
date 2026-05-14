@@ -1,0 +1,66 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Faq CSS
+----------------------------------------*/
+.h5-faq-left {
+	position: relative;
+	height: 100%;
+}
+.faq-name {
+	width: 100%;
+	position: absolute;
+	right: 88px;
+	bottom: 0;
+	@media (min-width: 1900px) {
+		width: 829px;
+	}
+	@media (min-width: 1701px) {
+		width: 115%;
+	}
+	@media #{$xxxl} {
+		width: 105%;
+	}
+	@media #{$xxl, $xl} {
+		right: 50px;
+	}
+	@media #{$lg} {
+		right: 20px;
+	}
+	@media #{$md, $sm, $xs} {
+		position: unset;
+		margin-top: 50px;
+	}
+}
+
+.tj-faq {
+	&.style-4 {
+		.accordion-item {
+			background: var(--tj-color-theme-dark);
+			border: 1px solid var(--tj-color-border-1);
+			border-radius: 10px;
+			.faq-title {
+				padding: 19px 0 19px 35px;
+				&::after {
+					color: var(--tj-color-common-white);
+					left: 0;
+					right: inherit;
+				}
+			}
+			.accordion-body {
+				color: var(--tj-color-grey-3);
+			}
+			&.active {
+				border: 2px solid var(--tj-color-theme-primary);
+				box-shadow: 0 0 15px rgba(255, 0, 127, 0.7);
+				.faq-title {
+					&::after {
+						color: var(--tj-color-theme-primary);
+					}
+				}
+			}
+		}
+	}
+}
+
+/* !END: Faq CSS */

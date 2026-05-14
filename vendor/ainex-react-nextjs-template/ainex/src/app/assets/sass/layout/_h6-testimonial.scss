@@ -1,0 +1,261 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Testimonial CSS
+----------------------------------------*/
+.h6-testimonial-section {
+	background-color: var(--tj-color-theme-bg);
+	border-radius: 24px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	.sec-heading {
+		max-width: 550px;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
+		.sub-title {
+			background-color: var(--tj-color-theme-dark);
+		}
+	}
+	.testimonial-bg {
+		opacity: 0.3;
+		mix-blend-mode: exclusion;
+	}
+}
+.testimonial-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.testimonial-slider-4 {
+	height: 340px;
+	border-radius: 12px;
+	.swiper-slide {
+		height: auto !important;
+	}
+	@media #{$md, $sm, $xs} {
+		height: auto;
+	}
+}
+.testimonial-item {
+	&.style-5 {
+		background-color: var(--tj-color-theme-dark);
+		padding: 45px 50px;
+		position: relative;
+		z-index: 1;
+		.quote-icon {
+			position: absolute;
+			top: -8px;
+			right: 17px;
+			font-size: 205px;
+			z-index: -1;
+			-webkit-text-fill-color: transparent;
+			-webkit-text-stroke: 2px var(--tj-color-theme-primary);
+			opacity: 0.2;
+			@media #{$lg, $md} {
+				font-size: 190px;
+			}
+			@media #{$sm, $xs} {
+				font-size: 160px;
+			}
+		}
+		.star-ratings {
+			font-size: 18px;
+			margin-bottom: 25px;
+		}
+		.desc {
+			color: var(--tj-color-grey-1);
+			font-size: 28px;
+			line-height: 1.286;
+			@media #{$xl} {
+				font-size: 26px;
+			}
+			@media #{$lg, $md} {
+				font-size: 24px;
+			}
+			@media #{$sm, $xs} {
+				font-size: 20px;
+			}
+		}
+		.testimonial-author {
+			border: 0;
+			padding-top: 15px;
+			.author-header {
+				display: inline-flex;
+				align-items: center;
+				gap: 7px;
+			}
+			.title {
+				font-size: 20px;
+				@media #{$sm, $xs} {
+					font-size: 18px;
+				}
+			}
+			.designation {
+				font-size: 18px;
+				@media #{$sm, $xs} {
+					font-size: 16px;
+				}
+			}
+			@media #{$sm, $xs} {
+				padding-top: 0;
+			}
+		}
+		@media #{$lg, $md} {
+			padding: 35px 30px;
+		}
+		@media #{$sm, $xs} {
+			padding: 25px 15px;
+		}
+		@media #{$md, $sm, $xs} {
+			border-radius: 12px;
+		}
+	}
+}
+
+.h6-testimonial-wrapper {
+	position: relative;
+	.client-thumb {
+		max-width: 355px;
+		width: 100%;
+		margin: 50px 0 0 40px;
+		padding: 10px;
+		.thumb-img {
+			width: 92px;
+			height: 92px;
+			background-color: var(--tj-color-theme-bg);
+			border-radius: 50%;
+			overflow: hidden;
+			position: relative;
+			cursor: pointer;
+
+			@media #{$md} {
+				width: 80px;
+				height: 80px;
+			}
+			@media #{$sm, $xs} {
+				width: 65px;
+				height: 65px;
+			}
+		}
+		@media #{$md, $sm, $xs} {
+			margin: 25px 0;
+		}
+		@media #{$md} {
+			max-width: 320px;
+		}
+		@media #{$sm, $xs} {
+			max-width: 260px;
+		}
+	}
+	.h6-testimonial-navigation {
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		left: -330px;
+		.slider-next,
+		.slider-prev {
+			transform: rotate(90deg);
+			@media #{$md, $sm, $xs} {
+				transform: none;
+			}
+		}
+		.h6-swiper-pagination {
+			transform: none;
+		}
+
+		@media #{$xl} {
+			left: -285px;
+		}
+		@media #{$lg} {
+			left: -240px;
+		}
+		@media #{$md, $sm, $xs} {
+			flex-direction: row;
+			position: unset;
+		}
+	}
+}
+
+.thumb-progress {
+	position: absolute;
+	left: -10px;
+	top: -10px;
+	z-index: 10;
+	width: 112px;
+	height: 112px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	color: var(--tj-color-theme-primary);
+	svg {
+		position: absolute;
+		left: 0;
+		top: 0px;
+		z-index: 10;
+		width: 100%;
+		height: 100%;
+		stroke-width: 1.2px;
+		stroke: var(--tj-color-theme-primary);
+		fill: none;
+		stroke-dashoffset: 120;
+		stroke-dasharray: 130;
+		transform: rotate(-90deg);
+		opacity: 0;
+
+		&:first-child {
+			stroke: var(--tj-color-grey-2);
+			stroke-dashoffset: 0;
+			stroke-dasharray: 0;
+		}
+	}
+
+	@media #{$md} {
+		width: 100px;
+		height: 100px;
+	}
+	@media #{$sm, $xs} {
+		width: 85px;
+		height: 85px;
+	}
+}
+
+.swiper-slide-active {
+	.thumb-progress {
+		svg {
+			animation: progress 5.5s linear;
+		}
+	}
+}
+
+@keyframes progress {
+	0% {
+		stroke-dashoffset: 120;
+		opacity: 0;
+	}
+	1% {
+		opacity: 1;
+	}
+
+	90% {
+		stroke-dashoffset: 0;
+		opacity: 1;
+	}
+
+	100% {
+		stroke-dashoffset: -135;
+		opacity: 1;
+	}
+}
+
+/* !END: Testimonial CSS */

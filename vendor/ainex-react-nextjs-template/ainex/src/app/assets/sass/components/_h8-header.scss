@@ -1,0 +1,62 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Header CSS
+----------------------------------------*/
+.header-area.header-8 {
+	padding: 30px 38px;
+	@media #{$xxl, $xl} {
+		padding: 30px 18px;
+	}
+	@media #{$lg} {
+		padding: 20px 8px;
+	}
+	@media #{$md, $sm, $xs} {
+		padding: 0;
+	}
+	.mainmenu {
+		> ul {
+			column-gap: 0;
+			> li {
+				> a {
+					padding: 13px 29px;
+					background-color: var(--tj-color-theme-bg);
+					border: 1px solid var(--tj-color-theme-bg);
+					border-radius: 30px;
+					@media #{$lg} {
+						padding: 11px 19px;
+					}
+				}
+				&.menu-item-has-children,
+				&.has-dropdown {
+					> a {
+						padding: 13px 42px 13px 29px;
+						@media #{$lg} {
+							padding: 11px 32px 11px 19px;
+						}
+						&::after {
+							top: 17px;
+							right: 29px;
+							@media #{$lg} {
+								top: 15px;
+								right: 19px;
+							}
+						}
+					}
+				}
+				&.current-menu-ancestor,
+				&.current-menu-item,
+				&:hover {
+					> a {
+						border-color: var(--tj-color-theme-primary);
+					}
+				}
+			}
+		}
+	}
+	.header-right-item {
+		gap: 15px;
+	}
+}
+
+/* !END: Theme Header CSS */

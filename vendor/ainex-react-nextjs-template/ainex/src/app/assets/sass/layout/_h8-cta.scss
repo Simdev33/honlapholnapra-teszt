@@ -1,0 +1,162 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: CTA CSS
+----------------------------------------*/
+.h8-cta-section {
+	position: relative;
+	border-radius: 24px;
+	box-shadow: 0 0 40px 0 rgba(236, 131, 187, 0.6);
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to right, rgb(255, 0, 127), rgb(102, 122, 255));
+		border-radius: 24px;
+	}
+	@media #{$md, $sm, $xs} {
+		box-shadow: 0 0 30px 0 rgba(236, 131, 187, 0.6);
+		margin-inline-start: 15px;
+		margin-inline-end: 15px;
+	}
+	.cta-bg {
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: contain;
+		mix-blend-mode: luminosity;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		max-width: 1480px;
+		width: 100%;
+		height: 100%;
+		border-radius: 24px;
+		pointer-events: none;
+	}
+}
+@keyframes gradient-animation {
+	0% {
+		background-position: 15% 0%;
+	}
+	50% {
+		background-position: 85% 100%;
+	}
+	100% {
+		background-position: 15% 0%;
+	}
+}
+
+.h8-cta-wrap {
+	background-color: var(--tj-color-theme-dark);
+	position: relative;
+	border-radius: 24px;
+	margin: 2px;
+	padding: 120px 0;
+	.sec-heading {
+		width: auto;
+		margin-bottom: 30px;
+	}
+	@media #{$md, $sm, $xs} {
+		padding: 70px 0;
+	}
+}
+.h8-cta-area {
+	max-width: 900px;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+	position: relative;
+	z-index: 2;
+
+	.cta-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.cta-icon {
+			max-width: 73px;
+			margin-bottom: 5px;
+			@media #{$sm, $xs} {
+				max-width: 55px;
+			}
+		}
+		.title {
+			max-width: 800px;
+			font-size: 76px;
+			line-height: 1.105;
+			color: var(--tj-color-common-white);
+			text-transform: uppercase;
+			text-align: center;
+			margin: 0;
+			span {
+				display: inline-flex;
+				line-height: 1;
+				position: relative;
+				top: 10px;
+				img {
+					max-width: 192px;
+					border-radius: 40px;
+					@media #{$lg} {
+						max-width: 165px;
+					}
+					@media #{$md} {
+						max-width: 140px;
+					}
+					@media #{$sm, $xs} {
+						max-width: 115px;
+					}
+				}
+				@media #{$sm, $xs} {
+					top: 5px;
+				}
+			}
+			@media #{$lg} {
+				max-width: 700px;
+				font-size: 60px;
+			}
+			@media #{$md} {
+				max-width: 550px;
+				font-size: 50px;
+			}
+			@media #{$sm, $xs} {
+				max-width: 500px;
+				font-size: 45px;
+			}
+		}
+		.tj-primary-btn {
+			.btn-icon {
+				font-size: 18px;
+			}
+		}
+	}
+	.cursor-img-1 {
+		position: absolute;
+		left: 0;
+		bottom: -10px;
+		max-width: 116px;
+		width: 100%;
+		-webkit-animation: movingHorizontal 3s linear infinite;
+		animation: movingHorizontal 3s linear infinite;
+		@media #{$sm, $xs} {
+			bottom: -20px;
+		}
+	}
+	.cursor-img-2 {
+		position: absolute;
+		right: 0;
+		bottom: 55px;
+		max-width: 95px;
+		width: 100%;
+		-webkit-animation: jumping 3s linear infinite 1s;
+		animation: jumping 3s linear infinite 1s;
+		@media #{$sm, $xs} {
+			right: -10px;
+			bottom: 20px;
+		}
+	}
+}
+
+/* !END: CTA CSS */

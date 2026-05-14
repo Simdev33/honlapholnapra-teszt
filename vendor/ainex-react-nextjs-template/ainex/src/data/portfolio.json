@@ -1,0 +1,83 @@
+[
+	{
+		"id": 1,
+		"title": "Redefining Intelligence for Tomorrow Tech",
+		"title2": "Redefining Intelligence for Tomorrow Tech matters Solutions.",
+		"img": "/images/project/project-1.webp",
+		"img2": "/images/project/project-details-1.webp",
+		"desc": "",
+		"category": "AI Horizon"
+	},
+	{
+		"id": 2,
+		"title": "Elevating Possibilities with Intelligence",
+		"title2": "Custom Automation Solutions for Healthcare Providers.",
+		"img": "/images/project/project-2.webp",
+		"img2": "/images/project/project-details-2.webp",
+		"desc": "",
+		"category": "Quantum"
+	},
+	{
+		"id": 3,
+		"title": "Intelligence for Modern Challenges",
+		"title2": "Machine Learning Model for Financial Risk Assessment.",
+		"img": "/images/project/project-3.webp",
+		"img2": "/images/project/project-details-3.webp",
+		"desc": "",
+		"category": "Quantum"
+	},
+	{
+		"id": 4,
+		"title": "Transforming Businesses with Intelligence",
+		"title2": "Predictive Maintenance System for Manufacturing.",
+		"img": "/images/project/project-4.webp",
+		"img2": "/images/project/project-details-4.webp",
+		"desc": "",
+		"category": "Innovate"
+	},
+	{
+		"id": 5,
+		"title": "Redefining Intelligence for Tomorrow Tech",
+		"title2": "Redefining Intelligence for Tomorrow Tech matters Solutions.",
+		"img": "/images/project/project-5.webp",
+		"img2": "/images/project/project-details-5.webp",
+		"desc": "",
+		"category": "Innovate"
+	},
+	{
+		"id": 6,
+		"title": "Elevating Possibilities with Intelligence",
+		"title2": "Redefining Intelligence for Tomorrow Tech matters Solutions.",
+		"img": "/images/project/project-6.webp",
+		"img2": "/images/project/project-details-6.webp",
+		"desc": "",
+		"category": "AI Horizon"
+	},
+	{
+		"id": 7,
+		"title": "Redefining Intelligence for Tomorrow Tech",
+		"title2": "Redefining Intelligence for Tomorrow Tech matters Solutions.",
+		"img": "/images/project/project-1.webp",
+		"img2": "/images/project/project-details-1.webp",
+		"desc": "",
+		"category": "AI Horizon"
+	},
+	{
+		"id": 8,
+		"title": "Elevating Possibilities with Intelligence",
+		"title2": "Redefining Intelligence for Tomorrow Tech matters Solutions.",
+		"img": "/images/project/project-2.webp",
+		"img2": "/images/project/project-details-2.webp",
+		"desc": "",
+		"category": "Quantum"
+	},
+	{
+		"id": 9,
+		"title": "Intelligence for Modern Challenges",
+		"title2": "Redefining Intelligence for Tomorrow Tech matters Solutions.",
+		"img": "/images/project/project-3.webp",
+		"img2": "/images/project/project-details-3.webp",
+		"desc": "",
+		"category": "Quantum"
+	}
+]

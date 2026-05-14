@@ -1,0 +1,48 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Blog CSS
+----------------------------------------*/
+.blog-item {
+	&.style-6 {
+		background-color: transparent;
+		border: 1px solid var(--tj-color-border-1);
+		padding: 10px;
+		.blog-thumb {
+			height: 290px;
+			border-radius: 12px;
+		}
+		.blog-content {
+			padding: 25px 20px 20px 20px;
+			.text-btn {
+				background-color: transparent;
+				position: unset;
+				padding: 0;
+				border-radius: 0;
+				margin-top: 22px;
+				&::after,
+				&::before {
+					display: none;
+				}
+				.btn-text {
+					color: var(--tj-color-text-body);
+				}
+				@media #{$sm, $xs} {
+					margin-top: 16px;
+				}
+			}
+			.blog-meta {
+				margin-bottom: 20px;
+				@media #{$sm, $xs} {
+					margin-bottom: 16px;
+				}
+			}
+			@media #{$sm, $xs} {
+				width: 100%;
+				padding: 30px 0 15px;
+			}
+		}
+	}
+}
+
+/* !END: Blog CSS */

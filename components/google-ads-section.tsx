@@ -26,20 +26,18 @@ const benefits = [
 export function GoogleAdsSection() {
   return (
     <section id="google-ads" className="relative overflow-hidden py-28">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-blue-50/70 pointer-events-none" />
-      <div className="absolute top-0 right-[-10%] h-[460px] w-[460px] rounded-full bg-blue-400/15 blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-[-20%] left-[-8%] h-[420px] w-[420px] rounded-full bg-cyan-400/15 blur-[140px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0b0428] via-[#090322] to-[#0a0324] pointer-events-none" />
+      <div className="absolute top-0 right-[-10%] h-[460px] w-[460px] rounded-full bg-fuchsia-500/20 blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-[-20%] left-[-8%] h-[420px] w-[420px] rounded-full bg-violet-500/20 blur-[140px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-14 text-center">
-          <div className="glass mb-6 inline-flex items-center rounded-full border border-blue-200/70 bg-white/80 px-4 py-2">
-            <span className="text-sm font-medium text-blue-700">Google Ads szolgáltatás</span>
+          <div className="glass mb-6 inline-flex items-center rounded-full border border-fuchsia-400/40 bg-[#160e3b]/80 px-4 py-2">
+            <span className="text-sm font-medium text-fuchsia-300">Google Ads szolgáltatás</span>
           </div>
           <h2 className="mb-6 text-4xl font-bold text-slate-900 sm:text-5xl">
             Honlap holnapra,{" "}
-            <span className="bg-gradient-to-r from-blue-800 to-cyan-600 bg-clip-text text-transparent">
-              vevők holnaputánra
-            </span>
+            <span className="text-fuchsia-300">vevők holnaputánra</span>
           </h2>
           <p className="mx-auto max-w-4xl text-lg leading-relaxed text-slate-700">
             Kész a tökéletes weboldalad? Hozzunk rá azonnal fizető vevőket! Megépítettük neked a tökéletes

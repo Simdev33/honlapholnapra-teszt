@@ -1,0 +1,332 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Hero CSS
+----------------------------------------*/
+.h8-banner-section {
+	padding-bottom: 105px;
+	@media #{$sm, $xs} {
+		padding-bottom: 70px;
+	}
+}
+.h8-banner-area {
+	position: relative;
+	border-radius: 24px;
+	overflow: hidden;
+	padding-bottom: 446px;
+	.banner-content {
+		max-width: 1100px;
+		margin: 100px auto;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		.sub-title {
+			display: inline-flex;
+			align-items: center;
+			gap: 4px;
+			color: var(--tj-color-theme-primary);
+			font-size: 15px;
+			line-height: 1.4;
+			font-weight: var(--tj-fw-sbold);
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			margin-bottom: 15px;
+			position: relative;
+			&::before {
+				content: "[";
+				color: var(--tj-color-theme-primary);
+				display: inline-flex;
+				margin-right: 2px;
+			}
+			&::after {
+				content: "]";
+				color: var(--tj-color-theme-primary);
+				display: inline-flex;
+				margin-left: 2px;
+			}
+		}
+		.banner-title {
+			font-size: 96px;
+			margin-bottom: 0;
+			span {
+				display: inline-flex;
+				position: relative;
+				top: 8px;
+				span {
+					line-height: 0;
+					margin-inline-start: -17px;
+					position: relative;
+					z-index: 2;
+					top: 0;
+					img {
+						width: 83px;
+						height: 83px;
+						border: 1px solid rgba(255, 255, 255, 0.2);
+						border-radius: 24px;
+						@media #{$xl} {
+							width: 76px;
+							height: 76px;
+							border-radius: 20px;
+						}
+						@media #{$lg} {
+							width: 68px;
+							height: 68px;
+							border-radius: 18px;
+						}
+						@media #{$md} {
+							width: 56px;
+							height: 56px;
+							border-radius: 16px;
+						}
+						@media #{$sm} {
+							width: 50px;
+							height: 50px;
+							border-radius: 14px;
+						}
+						@media #{$xs} {
+							width: 46px;
+							height: 46px;
+							border-radius: 12px;
+						}
+					}
+					&:first-child {
+						margin-inline-start: 0;
+						z-index: 1;
+					}
+					@media #{$md, $sm, $xs} {
+						margin-inline-start: -12px;
+					}
+				}
+			}
+			ul {
+				display: inline-flex;
+				list-style: none;
+				position: relative;
+				top: -8px;
+				li {
+					line-height: 0;
+					margin-inline-start: -17px;
+					position: relative;
+					z-index: 2;
+					img {
+						width: 83px;
+						height: 83px;
+						border: 1px solid rgba(255, 255, 255, 0.2);
+						border-radius: 24px;
+						@media #{$xl} {
+							width: 76px;
+							height: 76px;
+							border-radius: 20px;
+						}
+						@media #{$lg} {
+							width: 68px;
+							height: 68px;
+							border-radius: 18px;
+						}
+						@media #{$md} {
+							width: 56px;
+							height: 56px;
+							border-radius: 16px;
+						}
+						@media #{$sm} {
+							width: 50px;
+							height: 50px;
+							border-radius: 14px;
+						}
+						@media #{$xs} {
+							width: 46px;
+							height: 46px;
+							border-radius: 12px;
+						}
+					}
+					&:first-child {
+						margin-inline-start: 0;
+						z-index: 1;
+					}
+					@media #{$xs} {
+						margin-inline-start: -14px;
+					}
+				}
+
+				@media #{$lg} {
+					top: -5px;
+				}
+				@media #{$md, $sm} {
+					top: -3px;
+				}
+				@media #{$xs} {
+					top: -2px;
+				}
+			}
+
+			@media #{$xl} {
+				font-size: 86px;
+			}
+			@media #{$lg} {
+				font-size: 76px;
+			}
+			@media #{$md} {
+				font-size: 60px;
+			}
+			@media #{$sm} {
+				font-size: 56px;
+			}
+			@media #{$xs} {
+				font-size: 46px;
+			}
+		}
+		.desc {
+			max-width: 660px;
+			font-size: 18px;
+		}
+		.banner-btn-area {
+			margin-top: 30px;
+			.tj-secondary-btn {
+				font-size: 18px;
+				gap: 14px;
+				padding: 6px 6px 6px 35px;
+				.btn-icon {
+					width: 52px;
+					height: 52px;
+					font-size: 28px;
+					@media #{$lg, $md, $sm, $xs} {
+						width: 42px;
+						height: 42px;
+						font-size: 20px;
+					}
+				}
+				@media #{$lg, $md, $sm, $xs} {
+					font-size: 16px;
+					gap: 10px;
+					padding: 5px 5px 5px 25px;
+				}
+			}
+		}
+		.cursor-img-1 {
+			position: absolute;
+			left: 14px;
+			bottom: 32px;
+			max-width: 116px;
+			width: 100%;
+			animation: movingHorizontal 3s linear infinite;
+			@media #{$sm, $xs} {
+				max-width: 100px;
+				bottom: -40px;
+			}
+		}
+		.cursor-img-2 {
+			position: absolute;
+			right: 15px;
+			bottom: 86px;
+			max-width: 95px;
+			width: 100%;
+			animation: jumping 3s linear infinite 1s;
+			@media #{$md} {
+				bottom: 70px;
+			}
+			@media #{$sm, $xs} {
+				max-width: 82px;
+				bottom: 20px;
+				right: 5px;
+			}
+		}
+		@media #{$xl} {
+			max-width: 1000px;
+		}
+		@media #{$lg} {
+			max-width: 880px;
+		}
+		@media #{$md} {
+			max-width: 700px;
+			margin-top: 70px;
+		}
+		@media #{$sm, $xs} {
+			max-width: 650px;
+			padding: 0 15px;
+			margin-top: 70px;
+		}
+	}
+	.h8-heor-bg {
+		background-color: var(--tj-color-theme-bg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-blend-mode: luminosity;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: -250px;
+			right: -500px;
+			width: 700px;
+			height: 700px;
+			border-radius: 50%;
+			background: var(--tj-color-theme-primary);
+			-webkit-filter: blur(100px);
+			filter: blur(100px);
+			backdrop-filter: blur(10px);
+			opacity: 0.3;
+			@media #{$xl, $lg} {
+				top: -100px;
+				right: -350px;
+				width: 500px;
+				height: 500px;
+			}
+			@media #{$md, $sm, $xs} {
+				top: -100px;
+				right: -150px;
+				width: 400px;
+				height: 400px;
+			}
+		}
+		&::after {
+			top: auto;
+			right: auto;
+			left: -480px;
+			bottom: -250px;
+			@media #{$xl, $lg} {
+				left: -380px;
+				bottom: -100px;
+			}
+		}
+	}
+
+	@media #{$xl} {
+		padding-bottom: 426px;
+	}
+	@media #{$lg, $md} {
+		padding-bottom: 300px;
+	}
+	@media #{$sm, $xs} {
+		padding-bottom: 150px;
+	}
+}
+.dashboard-img {
+	max-width: 1326px;
+	width: 100%;
+	margin: -446px auto 0;
+	position: relative;
+	z-index: 2;
+	@media #{$xl} {
+		max-width: 1140px;
+		margin-top: -426px;
+	}
+	@media #{$lg, $md} {
+		max-width: calc(100% - 60px);
+		margin-top: -300px;
+	}
+	@media #{$sm, $xs} {
+		max-width: calc(100% - 25px);
+		margin-top: -150px;
+	}
+}
+
+/* !END: Hero CSS */

@@ -1,0 +1,119 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Faq CSS
+----------------------------------------*/
+.h7-faq-section {
+	position: relative;
+	z-index: 1;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: -400px;
+		width: 800px;
+		height: 800px;
+		border-radius: 50%;
+		background: var(--tj-color-theme-primary);
+		-webkit-filter: blur(100px);
+		filter: blur(100px);
+		backdrop-filter: blur(10px);
+		opacity: 0.2;
+		z-index: -1;
+		transform: translateY(-50%);
+		pointer-events: none;
+		@media #{$xl,$lg} {
+			left: -300px;
+			width: 600px;
+			height: 600px;
+		}
+		@media #{$md, $sm, $xs} {
+			left: -200px;
+			width: 400px;
+			height: 400px;
+		}
+	}
+	.sec-heading-inner {
+		align-items: flex-start;
+		.sec-title {
+			max-width: 660px;
+			width: 100%;
+			font-size: 106px;
+			line-height: 1;
+			margin-top: -15px;
+			@media #{$xl} {
+				max-width: 600px;
+				font-size: 90px;
+			}
+			@media #{$lg} {
+				max-width: 480px;
+				font-size: 70px;
+			}
+			@media #{$md} {
+				font-size: 60px;
+			}
+			@media #{$sm, $xs} {
+				font-size: 46px;
+			}
+		}
+	}
+	.tj-primary-btn {
+		.btn-icon {
+			font-size: 18px;
+		}
+	}
+}
+.tj-faq {
+	&.style-5 {
+		max-width: 980px;
+		margin-inline-start: auto;
+		.accordion-item {
+			background: var(--tj-color-theme-bg);
+			border: 2px solid var(--tj-color-theme-bg);
+			.faq-title {
+				color: var(--tj-color-grey-1);
+				padding: 24px 45px 24px 0;
+				span {
+					color: var(--tj-color-common-white);
+				}
+				&::after {
+					width: 40px;
+					height: 40px;
+					line-height: 38px;
+					top: 19px;
+					background-color: var(--tj-color-theme-dark);
+					border-radius: 50%;
+					border: 1px solid var(--tj-color-border-1);
+					color: var(--tj-color-theme-primary);
+				}
+			}
+			.accordion-body {
+				color: var(--tj-color-grey-3);
+				padding-top: 0;
+			}
+			.text-btn {
+				&.style-2 {
+					margin-top: 10px;
+					.btn-text {
+						color: var(--tj-color-grey-1);
+					}
+				}
+			}
+			&.active {
+				border-color: var(--tj-color-theme-primary);
+				.faq-title {
+					color: var(--tj-color-common-white);
+				}
+			}
+		}
+
+		@media #{$xl} {
+			max-width: 860px;
+		}
+		@media #{$lg} {
+			max-width: 700px;
+		}
+	}
+}
+
+/* !END: Faq CSS */
