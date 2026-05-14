@@ -1,0 +1,151 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Services CSS
+----------------------------------------*/
+.h6-service {
+	&-area {
+		position: relative;
+		z-index: 1;
+	}
+	&-item {
+		width: 66%;
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@media #{$md, $sm, $xs} {
+			width: 100%;
+		}
+		&.hover-item {
+			&.active {
+				.h6-service-content {
+					border-color: var(--tj-color-theme-primary);
+					box-shadow: 0 0 15px rgba(255, 0, 127, 0.7);
+					.service-icon {
+						background-color: var(--tj-color-theme-primary);
+						color: var(--tj-color-common-white);
+						transform: rotateY(360deg);
+					}
+				}
+				.h6-service-img {
+					z-index: 5;
+					img {
+						left: 0;
+						opacity: 1;
+						visibility: visible;
+						@include transition(all 0.5s linear 0s);
+						@media #{$md, $sm, $xs} {
+							position: unset;
+						}
+					}
+					@media #{$md, $sm, $xs} {
+						height: 300px;
+						margin-top: 15px;
+					}
+				}
+			}
+		}
+	}
+	&-content {
+		background-color: var(--tj-color-theme-bg);
+		border: 2px solid var(--tj-color-theme-bg);
+		border-radius: 14px;
+		padding: 28px 24px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 25px;
+		@media #{$lg, $md} {
+			padding: 24px 20px;
+		}
+		@media #{$sm, $xs} {
+			gap: 15px;
+			padding: 20px 15px;
+		}
+		.title-area {
+			display: inline-flex;
+			align-items: center;
+			gap: 25px;
+			max-width: 265px;
+			width: 100%;
+			@media #{$sm, $xs} {
+				gap: 20px;
+			}
+		}
+		.title {
+			max-width: 160px;
+			margin-bottom: 0;
+			a {
+				&:hover {
+					color: var(--tj-color-theme-primary);
+				}
+			}
+		}
+		.service-icon {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background-color: var(--tj-color-theme-dark);
+			color: var(--tj-color-theme-primary);
+			font-size: 44px;
+			line-height: 1;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			@media #{$sm, $xs} {
+				width: 70px;
+				height: 70px;
+				font-size: 40px;
+			}
+		}
+		.desc {
+			width: 48.6%;
+			margin: 0 20px 0 0;
+			@media #{$xl, $lg, $md, $sm, $xs} {
+				margin: 0;
+			}
+			@media #{$sm, $xs} {
+				width: 100%;
+			}
+		}
+	}
+	&-img {
+		width: 415px;
+		height: 415px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-radius: 12px;
+		overflow: hidden;
+		z-index: 0;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 12px;
+			position: absolute;
+			left: -50%;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		@media #{$xl} {
+			width: 360px;
+			height: 360px;
+		}
+		@media #{$lg} {
+			width: 300px;
+			height: 300px;
+		}
+		@media #{$md, $sm, $xs} {
+			width: 100%;
+			height: 0;
+			position: unset;
+			@include transition(all 0.3s linear 0s);
+		}
+	}
+}
+
+/* !END: Services CSS */

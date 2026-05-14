@@ -1,0 +1,51 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Pricing CSS
+----------------------------------------*/
+.pricing {
+	&-box {
+		&.style-4 {
+			border-radius: 12px;
+			padding: 0;
+			.pricing-box-inner {
+				background-color: transparent;
+			}
+			&.active {
+				background-image: linear-gradient(
+					130deg,
+					rgba(1, 4, 128, 1) 23%,
+					rgba(255, 0, 127, 1) 78%
+				);
+				.package-period,
+				.package-desc {
+					color: var(--tj-color-common-white);
+				}
+				.list-style-3 {
+					ul {
+						li {
+							color: var(--tj-color-common-white);
+							i {
+								color: var(--tj-color-common-white);
+							}
+						}
+					}
+				}
+				.pricing-btn a {
+					background-color: var(--tj-color-theme-bg);
+					border-color: var(--tj-color-theme-bg);
+					.btn-icon {
+						background-color: transparent;
+						&::before {
+							background: var(--tj-color-theme-primary);
+						}
+						i {
+							color: var(--tj-color-common-white);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* !END: Pricing CSS */

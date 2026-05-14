@@ -1,0 +1,64 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Choose CSS
+----------------------------------------*/
+.tj-choose-section {
+	&-3 {
+		background-color: var(--tj-color-theme-bg);
+		border-radius: 24px;
+	}
+}
+
+.choose-box {
+	&.style-3 {
+		background-color: var(--tj-color-theme-dark);
+		border-radius: 12px;
+		overflow: visible;
+		&::before {
+			background: var(--tj-color-theme-primary);
+			box-shadow: 0 0 15px rgba(255, 0, 127, 0.7);
+			border-radius: 12px;
+		}
+		.choose-inner {
+			background-color: var(--tj-color-theme-dark);
+			padding: 30px 28px;
+			@media #{$xl, $lg, $md} {
+				padding: 30px 20px;
+			}
+			@media #{$sm, $xs} {
+				padding: 30px 15px;
+			}
+		}
+		.choose-icon {
+			background-color: var(--tj-color-theme-bg);
+		}
+		.text-btn.style-2 {
+			margin-top: 24px;
+			.btn-text {
+				color: var(--tj-color-common-white);
+				span {
+					text-shadow: 0 30px 0;
+				}
+			}
+			@media #{$sm, $xs} {
+				margin-top: 18px;
+			}
+		}
+		&:hover .choose-icon {
+			background-color: var(--tj-color-theme-primary);
+		}
+	}
+}
+.count-number {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	color: var(--tj-color-text-body-2);
+	font-size: 16px;
+	line-height: 1;
+	font-weight: var(--tj-fw-medium);
+	font-family: var(--tj-ff-heading);
+}
+
+/* !END: Choose CSS */
