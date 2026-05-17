@@ -1,0 +1,46 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Header CSS
+----------------------------------------*/
+.header-area {
+	&.header-6 {
+		border-radius: 12px;
+		.site_logo {
+			.logo {
+				@media #{$lg} {
+					max-width: 145px;
+				}
+			}
+		}
+		.menu-area {
+			background-color: var(--tj-color-theme-dark);
+			border-radius: 8px;
+			padding: 0 35px;
+			margin: 20px 0;
+			@media #{$lg} {
+				padding: 0 20px;
+			}
+		}
+		.mainmenu {
+			> ul {
+				> li {
+					> a {
+						padding-top: 17px;
+						padding-bottom: 17px;
+					}
+					&.menu-item-has-children,
+					&.has-dropdown {
+						> a {
+							&::after {
+								top: 21px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* !END: Theme Header CSS */

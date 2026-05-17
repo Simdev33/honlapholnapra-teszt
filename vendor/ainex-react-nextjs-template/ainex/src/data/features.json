@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"title": "Expertise in AI Innovation",
+		"icon": "tji-innovation",
+		"desc": "Specialize in delivering AI-powered solution revolutionize the way businesses operate."
+	},
+	{
+		"id": 2,
+		"title": "Seamless Integration",
+		"icon": "tji-integration",
+		"desc": "Specialize in delivering AI-powered solution revolutionize the way businesses operate."
+	},
+	{
+		"id": 3,
+		"title": "Future-Ready Technology",
+		"icon": "tji-technology",
+		"desc": "Specialize in delivering AI-powered solution revolutionize the way businesses operate."
+	},
+	{
+		"id": 4,
+		"title": "Dedicated Support",
+		"icon": "tji-support-2",
+		"desc": "Specialize in delivering AI-powered solution revolutionize the way businesses operate."
+	}
+]

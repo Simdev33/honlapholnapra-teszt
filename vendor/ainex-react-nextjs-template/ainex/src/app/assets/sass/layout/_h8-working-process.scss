@@ -1,0 +1,197 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Working process CSS
+----------------------------------------*/
+.h8-working-process {
+	position: relative;
+	z-index: 1;
+}
+.process-img {
+	&-area {
+		position: relative;
+		z-index: 1;
+		height: 100%;
+
+		@media #{$md} {
+			height: 660px;
+		}
+		@media #{$sm} {
+			height: 570px;
+		}
+		@media #{$xs} {
+			height: 470px;
+		}
+		@media #{$xxs} {
+			height: 400px;
+		}
+	}
+	position: absolute;
+	top: 0;
+	inset-inline-start: 0;
+	z-index: -1;
+	max-width: 605px;
+	width: 100%;
+	height: 661px;
+	border-radius: 20px;
+	box-shadow: 0 0 60px 0 rgb(236, 131, 187, 0.4);
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+	transform: scale(0.8);
+	&::before {
+		content: "";
+		position: absolute;
+		width: calc(100% + 4px);
+		height: calc(100% + 4px);
+		top: -2px;
+		left: -2px;
+		background-image: linear-gradient(
+			to right,
+			rgb(255, 0, 127),
+			rgb(102, 122, 255)
+		);
+		border-radius: 20px;
+		z-index: -1;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 20px;
+	}
+	&.active {
+		opacity: 1;
+		z-index: 2;
+		transform: scale(1);
+	}
+
+	@media #{$md} {
+		inset-inline-end: 0;
+		margin: 0 auto;
+	}
+	@media #{$sm, $xs} {
+		height: 100%;
+		box-shadow: 0 0 40px 0 rgb(236, 131, 187, 0.4);
+	}
+}
+
+.h8-process {
+	&-area {
+		margin-top: 35px;
+		margin-inline-start: 50px;
+		.sec-heading {
+			margin-bottom: 30px;
+		}
+		@media #{$md, $sm, $xs} {
+			margin-inline-start: 0;
+		}
+	}
+	&-wrap {
+		position: relative;
+		.process-line,
+		&::before {
+			content: "";
+			position: absolute;
+			width: 4px;
+			height: 100%;
+			top: 0;
+			left: 32px;
+			background: linear-gradient(
+				to bottom,
+				var(--tj-color-theme-bg) 0%,
+				rgba(24, 19, 59, 0.5) 100%
+			);
+			z-index: -1;
+
+			@media #{$sm, $xs} {
+				left: 28px;
+			}
+		}
+		.process-line {
+			background: linear-gradient(
+				to bottom,
+				rgb(255, 0, 127) 20%,
+				rgba(0, 0, 0, 0) 100%
+			);
+			height: 50%;
+		}
+	}
+	&-item {
+		&.process-item {
+			background-color: transparent;
+			flex-direction: row;
+			align-items: flex-start;
+			padding: 0;
+			z-index: 1;
+			margin-bottom: 45px;
+			&.active {
+				.process-step {
+					color: var(--tj-color-common-white);
+					background-color: var(--tj-color-theme-primary);
+				}
+				.title {
+					color: var(--tj-color-common-white);
+				}
+				.desc {
+					height: auto;
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			&:last-child {
+				margin-bottom: 30px;
+			}
+
+			@media #{$md, $sm, $xs} {
+				margin-bottom: 30px;
+			}
+		}
+		.process-step {
+			font-size: 20px;
+			color: var(--tj-color-grey-1);
+			font-family: var(--tj-ff-heading);
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background-color: var(--tj-color-theme-bg);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			flex: 0 0 auto;
+			position: unset;
+			writing-mode: inherit;
+			padding: 0;
+			border: 0;
+			transform: none;
+			&::after,
+			&::before {
+				display: none;
+			}
+			@media #{$sm, $xs} {
+				font-size: 18px;
+				width: 56px;
+				height: 56px;
+			}
+		}
+		.process-content {
+			max-width: 400px;
+			padding: 0;
+			.title {
+				color: var(--tj-color-grey-1);
+				font-weight: var(--tj-fw-medium);
+				margin-top: 20px;
+				cursor: pointer;
+				@media #{$sm, $xs} {
+					margin-top: 15px;
+				}
+			}
+			.desc {
+				height: 0;
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+}
+
+/* !END: Working process CSS */

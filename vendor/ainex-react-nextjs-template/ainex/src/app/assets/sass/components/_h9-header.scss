@@ -1,0 +1,79 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Header CSS
+----------------------------------------*/
+.header-area.header-9 {
+	&.header-absolute {
+		position: absolute;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+		padding: 30px 38px 0 38px;
+		@media #{$xxl, $xl} {
+			padding: 30px 18px 0 18px;
+		}
+		@media #{$lg} {
+			padding: 20px 8px 0 8px;
+		}
+		@media #{$md, $sm, $xs} {
+			padding: 0;
+		}
+	}
+	.menu-area {
+		padding: 0 35px;
+		background-color: rgba(255, 255, 255, 0.1);
+		border-radius: 40px;
+		backdrop-filter: blur(10px);
+		@media #{$lg} {
+			padding: 0 20px;
+		}
+	}
+	.mainmenu {
+		> ul {
+			> li {
+				> a {
+					color: var(--tj-color-common-white);
+					padding-top: 17px;
+					padding-bottom: 18px;
+				}
+				&.menu-item-has-children,
+				&.has-dropdown {
+					> a {
+						&::after {
+							top: 21px;
+						}
+					}
+				}
+				&.current-menu-ancestor,
+				&.current-menu-item,
+				&:hover {
+					> a {
+						color: var(--tj-color-theme-primary);
+						&::after {
+							color: var(--tj-color-theme-primary);
+						}
+					}
+				}
+			}
+		}
+	}
+	.header-right-item {
+		gap: 15px;
+	}
+	&.sticky {
+		padding: 25px 38px;
+		@media #{$xxl, $xl} {
+			padding: 25px 18px;
+		}
+		@media #{$lg} {
+			padding: 20px 8px;
+		}
+		@media #{$md, $sm, $xs} {
+			padding: 0;
+		}
+	}
+}
+
+/* !END: Theme Header CSS */

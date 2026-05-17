@@ -1,31 +1,51 @@
-import { Header } from "@/components/header"
-import { Hero } from "@/components/hero"
-import { Services } from "@/components/services"
-import { PainPoints } from "@/components/pain-points"
-import { GoogleAdsSection } from "@/components/google-ads-section"
-import { Workflow } from "@/components/workflow"
-import { Technology } from "@/components/technology"
-import { Pricing } from "@/components/pricing"
-import { About } from "@/components/about"
-import { AdsOffer } from "@/components/ads-offer"
-import { Contact } from "@/components/contact"
-import { Footer } from "@/components/footer"
+import Footer from "@/components/layout/footer/Footer"
+import Header from "@/components/layout/header/Header"
+import HeaderTop from "@/components/layout/header/HeaderTop"
+import About1 from "@/components/sections/about/About1"
+import Contact2 from "@/components/sections/contacts/Contact2"
+import Funfact1 from "@/components/sections/funfacts/Funfact1"
+import Hero from "@/components/sections/hero/Hero"
+import PricingPlan1 from "@/components/sections/pricing-plan/PricingPlan1"
+import Process from "@/components/sections/process/Process"
+import Services1 from "@/components/sections/services/Services1"
+import { BlogCarouselSection } from "@/components/blog-carousel-section"
+import BackToTop from "@/components/shared/others/BackToTop"
+import ClientWrapper from "@/components/shared/wrappers/ClientWrapper"
+import {
+  AdsOfferSection,
+  GoogleAdsSection,
+  PainPointsSection,
+  TechnologySection,
+} from "@/components/home-missing-sections"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <Header />
-      <Hero />
-      <Services />
-      <PainPoints />
-      <GoogleAdsSection />
-      <Workflow />
-      <Technology />
-      <Pricing />
-      <About />
-      <AdsOffer />
-      <Contact />
-      <Footer />
-    </main>
+    <div className="hh-has-fixed-topbar">
+      <HeaderTop />
+      <Header isStickyHeader={true} />
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <Header />
+          <main>
+            <Hero />
+            <Services1 />
+            <PainPointsSection />
+            <GoogleAdsSection />
+            <Funfact1 />
+            <Process />
+            <TechnologySection />
+            <PricingPlan1 />
+            <About1 />
+            <AdsOfferSection />
+            <BlogCarouselSection />
+            <Contact2 />
+          </main>
+          <Footer />
+          <div className="bottom-gap-30"></div>
+        </div>
+      </div>
+      <ClientWrapper />
+      <BackToTop />
+    </div>
   )
 }

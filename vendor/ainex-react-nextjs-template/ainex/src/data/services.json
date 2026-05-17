@@ -1,0 +1,74 @@
+[
+	{
+		"id": 1,
+		"title": "24 órás Expressz megoldás",
+		"img": "/hh-service-24h.png",
+		"img2": "/images/service/service-details-1.webp",
+		"iconName": "tji-service-1",
+		"desc": "Ha minden anyag rendelkezésre áll, a megbeszéléstől számított 24 órán belül élesítjük a kész, Google-barát oldaladat."
+	},
+	{
+		"id": 2,
+		"title": "Komplex és egyedi rendszerek",
+		"img": "/hh-service-complex.png",
+		"img2": "/images/service/service-details-2.webp",
+		"iconName": "tji-service-2",
+		"desc": "Webshopok, ügyfélportálok és összetett rendszerek gyors és stabil kivitelezése Next.js alapokon."
+	},
+	{
+		"id": 3,
+		"title": "Villámgyors betöltés",
+		"img": "/hh-service-speed.png",
+		"img2": "/images/service/service-details-3.webp",
+		"iconName": "tji-service-3",
+		"desc": "A gyors oldal nemcsak élményt ad, hanem konverziót is növel. A teljesítmény nálunk alap."
+	},
+	{
+		"id": 4,
+		"title": "SEO-ra született kód",
+		"img": "/hh-service-seo.png",
+		"img2": "/images/service/service-details-4.webp",
+		"iconName": "tji-service-4",
+		"desc": "Technikailag tiszta, keresőbarát kódot építünk, ami hosszú távon láthatóságot és bevételt hoz."
+	},
+	{
+		"id": 5,
+		"title": "Computer Vision",
+		"img": "/images/service/service-5.webp",
+		"img2": "/images/service/service-details-5.webp",
+		"iconName": "tji-service-1",
+		"desc": "Specialize in delivering AI-powered solution revolutionize the businesses operate be leveraging the our latest."
+	},
+	{
+		"id": 6,
+		"title": "Language Processing",
+		"img": "/images/service/service-6.webp",
+		"img2": "/images/service/service-details-6.webp",
+		"iconName": "tji-service-1",
+		"desc": "Specialize in delivering AI-powered solution revolutionize the businesses operate be leveraging the our latest."
+	},
+	{
+		"id": 7,
+		"title": "AI-Powered Solutions",
+		"img": "/images/service/service-1.webp",
+		"img2": "/images/service/service-details-1.webp",
+		"iconName": "tji-service-1",
+		"desc": "Specialize in delivering AI-powered solution revolutionize the businesses operate be leveraging the our latest."
+	},
+	{
+		"id": 8,
+		"title": "Custom Technology",
+		"img": "/images/service/service-2.webp",
+		"img2": "/images/service/service-details-2.webp",
+		"iconName": "tji-service-1",
+		"desc": "Specialize in delivering AI-powered solution revolutionize the businesses operate be leveraging the our latest."
+	},
+	{
+		"id": 9,
+		"title": "Predictive Analytics",
+		"img": "/images/service/service-3.webp",
+		"img2": "/images/service/service-details-3.webp",
+		"iconName": "tji-service-1",
+		"desc": "Specialize in delivering AI-powered solution revolutionize the businesses operate be leveraging the our latest."
+	}
+]

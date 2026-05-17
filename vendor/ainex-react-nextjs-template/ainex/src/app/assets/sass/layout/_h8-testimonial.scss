@@ -1,0 +1,118 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Testimonial CSS
+----------------------------------------*/
+.h8-testimonial-section {
+	background-color: var(--tj-color-theme-bg);
+	border-radius: 24px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+
+	&::after,
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -450px;
+		left: -450px;
+		width: 800px;
+		height: 800px;
+		border-radius: 50%;
+		background: var(--tj-color-theme-primary);
+		-webkit-filter: blur(100px);
+		filter: blur(100px);
+		opacity: 0.2;
+		z-index: -1;
+		pointer-events: none;
+		@media #{$xl, $lg} {
+			width: 600px;
+			height: 600px;
+			bottom: 150px;
+			left: -300px;
+		}
+		@media #{$md} {
+			width: 400px;
+			height: 500px;
+			bottom: 150px;
+			left: -150px;
+		}
+		@media #{ $sm, $xs} {
+			width: 400px;
+			height: 400px;
+			bottom: 150px;
+			left: -200px;
+		}
+	}
+	&::after {
+		left: auto;
+		bottom: auto;
+		top: -450px;
+		right: -450px;
+		@media #{$xl, $lg} {
+			right: -450px;
+		}
+		@media #{$md, $sm, $xs} {
+			width: 400px;
+			height: 400px;
+			top: 20px;
+			right: -250px;
+		}
+	}
+	.sec-heading {
+		&-inner {
+			@media #{$sm, $xs} {
+				gap: 0;
+			}
+		}
+		.sec-title {
+			max-width: 550px;
+			margin-inline-end: 190px;
+			span {
+				margin-inline-end: 20px;
+				@media #{$sm, $xs} {
+					margin-inline-end: 0;
+				}
+			}
+			@media #{$lg} {
+				max-width: 460px;
+				margin-inline-end: 80px;
+			}
+			@media #{$md, $sm, $xs} {
+				max-width: 450px;
+				margin-inline-end: 0;
+			}
+		}
+	}
+}
+
+.testimonial-slider-5 {
+	overflow: inherit;
+	.swiper-slide {
+		max-width: 645px;
+		width: 100%;
+		@media #{$xxl} {
+			max-width: 545px;
+		}
+	}
+	.testimonial-item {
+		border-radius: 12px;
+		.desc {
+			color: var(--tj-color-grey-1);
+			font-size: 22px;
+			line-height: 1.357;
+			@media #{$lg, $md,$sm, $xs} {
+				font-size: 20px;
+			}
+		}
+	}
+	.testimonial-pagination {
+		line-height: 0;
+		margin-top: 60px;
+		@media #{$sm, $xs} {
+			margin-top: 40px;
+		}
+	}
+}
+
+/* !END: Testimonial CSS */

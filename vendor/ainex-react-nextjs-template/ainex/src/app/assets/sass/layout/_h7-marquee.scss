@@ -1,0 +1,40 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Marquee CSS
+----------------------------------------*/
+.marquee-item-3 {
+	width: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 35px;
+	.marquee-text {
+		font-size: 32px;
+		line-height: 1.25;
+		margin: 0;
+		@media #{$md, $sm, $xs} {
+			font-size: 26px;
+		}
+	}
+	.marquee-icon {
+		color: var(--tj-color-common-white);
+		font-size: 28px;
+		line-height: 1;
+		animation: rotateAntiClock 6s linear infinite;
+		img {
+			height: 100%;
+		}
+		@media #{$md, $sm, $xs} {
+			font-size: 20px;
+		}
+	}
+	@media #{$md, $sm} {
+		gap: 25px;
+	}
+	@media #{$xs} {
+		gap: 20px;
+	}
+}
+
+/* !END: Theme Marquee CSS */

@@ -1,0 +1,186 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Home 5 About CSS
+----------------------------------------*/
+.h5-about-section {
+	position: relative;
+	z-index: 1;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -50%;
+		right: 0;
+		width: 900px;
+		height: 900px;
+		border-radius: 50%;
+		background: var(--tj-color-theme-primary);
+		-webkit-filter: blur(100px);
+		filter: blur(100px);
+		opacity: 0.2;
+		z-index: -1;
+		backdrop-filter: blur(10px);
+	}
+	@media #{$md,$sm,$xs} {
+		padding-top: 70px;
+	}
+}
+.h5-sec-heading {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 50px;
+	.sub-title {
+		flex: 0 0 auto;
+		align-items: start;
+	}
+	.sec-title {
+		width: 58.5%;
+		span {
+			color: inherit;
+			padding-inline-start: 135px;
+			@media #{$xl} {
+				padding-inline-start: 100px;
+			}
+			@media #{$lg} {
+				padding-inline-start: 80px;
+			}
+			@media #{$sm, $xs} {
+				padding-inline-start: 70px;
+			}
+		}
+		@media #{$md,$sm,$xs} {
+			width: 100%;
+		}
+	}
+	@media #{$xs} {
+		margin-bottom: 35px;
+	}
+}
+.h5-about {
+	background-color: var(--tj-color-theme-dark);
+	border-radius: 12px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	&-area {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@media #{$md,$sm,$xs} {
+			flex-direction: column-reverse;
+		}
+	}
+	&-content {
+		width: 58.5%;
+		.desc {
+			margin-bottom: 0;
+		}
+		.about-btn-area-2 {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 30px;
+			@media #{$sm,$xs} {
+				gap: 20px;
+			}
+		}
+		@media #{$md,$sm,$xs} {
+			width: 100%;
+		}
+	}
+	&-img {
+		max-width: 368px;
+		margin-inline-end: 0;
+		@media #{$xl} {
+			max-width: 330px;
+		}
+		@media #{$lg} {
+			max-width: 300px;
+		}
+		@media #{$md,$sm,$xs} {
+			margin: 40px auto 0;
+		}
+		@media #{$xxs} {
+			max-width: 200px;
+		}
+	}
+	&-funfact {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 460px;
+		width: 100%;
+		margin-bottom: 60px;
+		.countup-item {
+			padding: 0;
+			align-items: flex-start;
+			&:not(:last-child) {
+				padding-inline-end: 58px;
+				border-right: 1px solid var(--tj-color-border-1);
+				@media #{$lg} {
+					padding-inline-end: 30px;
+				}
+			}
+			&:not(:first-child) {
+				padding-inline-start: 60px;
+				position: relative;
+				z-index: 0;
+			}
+
+			.count-text {
+				max-width: 205px;
+				font-size: 16px;
+				font-family: var(--tj-ff-body);
+				font-weight: normal;
+				color: var(--tj-color-text-body);
+			}
+			.inline-content {
+				font-size: 68px;
+				color: var(--tj-color-heading-primary);
+				margin-bottom: 15px;
+				.odometer {
+					color: var(--tj-color-heading-primary);
+					.odometer-digit,
+					span {
+						color: var(--tj-color-heading-primary);
+					}
+				}
+				@media #{$xs} {
+					margin-bottom: 5px;
+				}
+			}
+			@media #{$xs} {
+				width: 100%;
+				text-align: start;
+				&:not(:last-child) {
+					padding-inline-end: 0;
+					padding-bottom: 30px;
+					border-right: 0;
+					border-bottom: 1px solid var(--tj-color-border-1);
+				}
+				&:not(:first-child) {
+					padding-inline-start: 0;
+					padding-top: 25px;
+				}
+			}
+		}
+		@media #{$xs} {
+			max-width: 100%;
+			margin-bottom: 35px;
+		}
+	}
+}
+.h5-marquee-area {
+	position: relative;
+	z-index: -1;
+	margin-top: -153px;
+	pointer-events: none;
+	@media #{$xl, $lg} {
+		margin-top: -100px;
+	}
+	@media #{$md,$sm,$xs} {
+		margin-top: -80px;
+	}
+}
+/* !END: Home 5 About CSS  */
