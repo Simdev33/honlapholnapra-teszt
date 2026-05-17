@@ -1,0 +1,65 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Working process CSS
+----------------------------------------*/
+.h6-working-process {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 24px;
+	position: relative;
+	z-index: 1;
+	.sec-heading {
+		max-width: 760px;
+		margin: 0 0 20px 0;
+		.sub-title {
+			background-color: var(--tj-color-theme-dark);
+		}
+	}
+}
+
+.h6-process-item {
+	&.process-item {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 30px;
+		overflow: hidden;
+		.process-step {
+			writing-mode: inherit;
+			color: var(--tj-color-common-white);
+			font-family: var(--tj-ff-heading);
+			background-color: var(--tj-color-theme-primary);
+			border-radius: 8px;
+			height: auto;
+			padding: 6px 10px;
+			border: 0;
+			transform: none;
+			top: 10px;
+			right: 10px;
+			&::after,
+			&::before {
+				display: none;
+			}
+		}
+		.title {
+			@media #{$xl} {
+				font-size: 22px;
+			}
+		}
+		@media #{$lg} {
+			padding: 30px 20px;
+		}
+	}
+	.process-icon {
+		border-radius: 50%;
+		@include transition(all 0.3s ease-in-out 0s);
+	}
+	&:hover {
+		.process-icon {
+			transform: rotateY(360deg);
+		}
+	}
+}
+
+/* !END: Working process CSS */

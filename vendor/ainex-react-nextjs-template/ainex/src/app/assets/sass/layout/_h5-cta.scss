@@ -1,0 +1,101 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: CTA CSS
+----------------------------------------*/
+.h5-cta-area {
+	max-width: 900px;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+	position: relative;
+	z-index: 2;
+	padding-bottom: 110px;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -40%;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		width: 90%;
+		height: 500px;
+		border-radius: 50%;
+		background: var(--tj-color-theme-primary);
+		-webkit-filter: blur(100px);
+		filter: blur(100px);
+		opacity: 0.18;
+		z-index: -1;
+		backdrop-filter: blur(10px);
+
+		@media #{$md, $sm, $xs} {
+			height: 100%;
+		}
+	}
+	.cta-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		.cta-icon {
+			max-width: 73px;
+			margin-bottom: 5px;
+			@media #{$sm, $xs} {
+				max-width: 55px;
+			}
+		}
+		.title {
+			max-width: 800px;
+			font-size: 76px;
+			line-height: 1.105;
+			color: var(--tj-color-common-white);
+			text-transform: uppercase;
+			text-align: center;
+			margin: 0;
+			@media #{$lg} {
+				max-width: 700px;
+				font-size: 60px;
+			}
+			@media #{$md} {
+				max-width: 550px;
+				font-size: 50px;
+			}
+			@media #{$sm, $xs} {
+				max-width: 500px;
+				font-size: 45px;
+			}
+			@media #{$xxs} {
+				font-size: 35px;
+			}
+		}
+		.tj-primary-btn {
+			.btn-icon {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.cta-map {
+		width: 100%;
+		position: absolute;
+		bottom: -44%;
+		left: 0;
+		z-index: -1;
+		opacity: 0.15;
+		animation: movingHorizontal 3s linear infinite;
+		@media #{$lg} {
+			bottom: -52%;
+		}
+		@media #{$sm, $xs} {
+			bottom: -23%;
+		}
+		@media #{$xxs} {
+			bottom: -2%;
+		}
+	}
+	@media #{$md, $sm, $xs} {
+		padding-bottom: 70px;
+	}
+}
+
+/* !END: CTA CSS */

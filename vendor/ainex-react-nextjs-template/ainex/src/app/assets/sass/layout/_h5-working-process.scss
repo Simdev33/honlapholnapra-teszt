@@ -1,0 +1,99 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Working process CSS
+----------------------------------------*/
+.h5-working-process {
+	background-color: var(--tj-color-theme-bg);
+	border-radius: 24px;
+	position: relative;
+	z-index: 1;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -70%;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		width: 900px;
+		height: 900px;
+		border-radius: 50%;
+		background: var(--tj-color-theme-primary);
+		-webkit-filter: blur(100px);
+		filter: blur(100px);
+		opacity: 0.2;
+		z-index: -1;
+		backdrop-filter: blur(10px);
+	}
+}
+.h5-process-wrapper {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 13px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		border-bottom: 1px dashed var(--tj-color-border-1);
+
+		@media #{$md, $sm, $xs} {
+			width: 1px;
+			height: calc(100% - 20px);
+			border-right: 1px dashed var(--tj-color-border-1);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+.h5-process-item-wrap {
+	position: relative;
+	text-align: center;
+	.process-step {
+		position: unset;
+		margin: 0 auto;
+		writing-mode: inherit;
+		color: var(--tj-color-text-body);
+		font-family: var(--tj-ff-heading);
+		background-color: var(--tj-color-theme-dark);
+		border-radius: 30px;
+		height: auto;
+		padding: 6px 10px;
+		border: 0;
+		transform: none;
+		&::after,
+		&::before {
+			display: none;
+		}
+	}
+	.process-icon {
+		border-radius: 50%;
+		@include transition(all 0.3s ease-in-out 0s);
+	}
+	.process-item {
+		flex-direction: column;
+		margin-top: 42px;
+		padding: 40px 30px 48px 30px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -12px;
+			left: 50%;
+			width: 24px;
+			height: 24px;
+			background-color: var(--tj-color-theme-dark);
+			transform: translateX(-50%) rotate(-45deg);
+		}
+	}
+	&:hover {
+		.process-step {
+			background-color: var(--tj-color-theme-primary);
+			color: var(--tj-color-common-white);
+		}
+		.process-icon {
+			transform: rotateY(360deg);
+		}
+	}
+}
+
+/* !END: Working process CSS */
