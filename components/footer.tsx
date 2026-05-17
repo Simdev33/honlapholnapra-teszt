@@ -21,8 +21,8 @@ const navigation = {
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-slate-300/60">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-sky-50/70 to-transparent" />
+    <footer className="relative border-t border-fuchsia-400/25">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07021a] to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 lg:py-20">
         <div className="glass glass-panel rounded-3xl px-8 py-10 md:px-10 md:py-12">
@@ -39,8 +39,8 @@ export function Footer() {
                   />
                 </div>
                 <div>
-                  <span className="text-lg font-semibold text-slate-900">honlapholnapra</span>
-                  <span className="text-blue-700">.hu</span>
+                  <span className="text-lg font-semibold text-white">honlapholnapra</span>
+                  <span className="text-fuchsia-400">.hu</span>
                 </div>
               </Link>
               <p className="mt-6 max-w-xs text-sm leading-relaxed text-slate-600">
@@ -95,8 +95,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-slate-300/60 pt-8 lg:flex-row">
-          <p className="text-sm text-slate-500">
+        <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-fuchsia-400/20 pt-8 lg:flex-row">
+          <p className="text-sm text-indigo-300">
             &copy; {new Date().getFullYear()} honlapholnapra.hu. Minden jog fenntartva.
           </p>
           

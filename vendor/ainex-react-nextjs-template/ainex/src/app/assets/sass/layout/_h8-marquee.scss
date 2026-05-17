@@ -1,0 +1,47 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Marquee CSS
+----------------------------------------*/
+.h8-marquee-section {
+	padding: 50px 0;
+	.marquee-wrap {
+		width: calc(100% + 10px);
+		transform: rotate(-3deg) translateX(-5px);
+	}
+	@media #{$xl, $lg} {
+		padding: 35px 0;
+	}
+	@media #{$md, $sm} {
+		padding: 28px 0;
+	}
+	@media #{$xs} {
+		padding: 15px 0;
+	}
+	&-2 {
+		position: relative;
+		z-index: 1;
+		.blur-shap {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			max-width: 692px;
+			width: 100%;
+			height: auto;
+			z-index: -1;
+			transform: translateY(-55%);
+			pointer-events: none;
+			@media #{$xl, $lg} {
+				max-width: 500px;
+			}
+			@media #{$md, $sm} {
+				max-width: 300px;
+			}
+			@media #{$xs} {
+				max-width: 150px;
+			}
+		}
+	}
+}
+
+/* !END: Theme Marquee CSS */

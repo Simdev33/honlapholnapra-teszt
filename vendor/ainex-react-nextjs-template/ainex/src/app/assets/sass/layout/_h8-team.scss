@@ -1,0 +1,196 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Team CSS
+----------------------------------------*/
+.h8-team-section {
+	overflow: hidden;
+	position: relative;
+	&::after,
+	&::before {
+		content: "";
+		position: absolute;
+		top: 120px;
+		left: -400px;
+		width: 800px;
+		height: 800px;
+		border-radius: 50%;
+		background: var(--tj-color-theme-primary);
+		-webkit-filter: blur(100px);
+		filter: blur(100px);
+		opacity: 0.2;
+		z-index: -1;
+		pointer-events: none;
+		@media #{$xl, $lg} {
+			width: 600px;
+			height: 600px;
+			top: 150px;
+			left: -300px;
+		}
+		@media #{$md} {
+			width: 400px;
+			height: 500px;
+			top: 150px;
+			left: -150px;
+		}
+		@media #{ $sm, $xs} {
+			width: 400px;
+			height: 400px;
+			top: 150px;
+			left: -200px;
+		}
+	}
+	&::after {
+		left: auto;
+		top: auto;
+		bottom: 40px;
+		right: -650px;
+		@media #{$xl, $lg} {
+			right: -450px;
+		}
+		@media #{$md, $sm, $xs} {
+			width: 400px;
+			height: 400px;
+			bottom: 20px;
+			right: -250px;
+		}
+	}
+	.sec-heading {
+		&-inner {
+			align-items: flex-start;
+			@media #{$sm, $xs} {
+				gap: 0;
+			}
+			.sec-title {
+				margin-inline-end: 300px;
+				@media #{$xl} {
+					margin-inline-end: 180px;
+				}
+				@media #{$lg} {
+					max-width: 450px;
+					margin-inline-end: 170px;
+				}
+				@media #{$md} {
+					max-width: 355px;
+				}
+				@media #{$md, $sm, $xs} {
+					margin-inline-end: 0;
+				}
+			}
+		}
+	}
+	.shape-2 {
+		position: absolute;
+		width: 906px;
+		left: -366px;
+		top: 100px;
+		z-index: -1;
+		opacity: 0.5;
+		mix-blend-mode: luminosity;
+		animation: jumping 3s linear infinite;
+		pointer-events: none;
+		@media #{$xl} {
+			width: 750px;
+			left: -305px;
+		}
+		@media #{$lg} {
+			width: 600px;
+			left: -245px;
+			top: 150px;
+		}
+		@media #{$md} {
+			width: 500px;
+			left: -200px;
+			top: 150px;
+		}
+		@media #{$sm, $xs} {
+			width: 400px;
+			left: -160px;
+			top: 150px;
+		}
+	}
+}
+
+.h8-team-item {
+	&.team-item {
+		background-color: var(--tj-color-theme-bg);
+		padding: 40px 20px 50px;
+		border-radius: 12px;
+		&::before {
+			top: auto;
+			bottom: 0;
+			transform: rotate(180deg);
+			z-index: -1;
+		}
+		&::after {
+			display: none;
+		}
+		&:hover::before {
+			opacity: 0.6;
+			height: 74%;
+		}
+		.team-content {
+			position: relative;
+			padding: 0;
+			text-align: center;
+		}
+		.title {
+			span {
+				color: var(--tj-color-grey-2);
+			}
+			@media #{$lg} {
+				font-size: 28px;
+			}
+		}
+		.team-img {
+			width: 233px;
+			height: 233px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin: 30px auto;
+			mix-blend-mode: luminosity;
+			img {
+				height: 100%;
+				object-fit: cover;
+				object-position: top;
+			}
+			@media #{$lg, $md} {
+				width: 190px;
+				height: 190px;
+			}
+		}
+		.social-links {
+			position: relative;
+			background-color: transparent;
+			padding: 0;
+			ul {
+				opacity: 1;
+				flex-direction: row;
+				gap: 8px;
+				li {
+					margin: 0;
+					a {
+						&:not(:hover) {
+							background-color: var(--tj-color-theme-dark);
+						}
+					}
+				}
+			}
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+		@media #{$lg, $md, $sm, $xs} {
+			padding: 30px 15px 40px;
+		}
+	}
+}
+.h8-text-circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+/* !END: Team CSS */

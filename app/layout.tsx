@@ -1,22 +1,39 @@
 import type { Metadata } from "next"
-import { Inter, Space_Grotesk } from "next/font/google"
+import { Poppins, Roboto } from "next/font/google"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
 import { CookieConsent } from "@/components/cookie-consent"
+import "swiper/css"
+import "swiper/css/effect-coverflow"
+import "swiper/css/effect-fade"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/thumbs"
+import "@/vendor/ainex-react-nextjs-template/ainex/src/app/assets/css/ainex-icons.css"
+import "@/vendor/ainex-react-nextjs-template/ainex/src/app/assets/css/animate.min.css"
+import "@/vendor/ainex-react-nextjs-template/ainex/src/app/assets/css/bootstrap.min.css"
+import "@/vendor/ainex-react-nextjs-template/ainex/src/app/assets/css/glightbox.min.css"
+import "@/vendor/ainex-react-nextjs-template/ainex/src/app/assets/css/meanmenu.css"
+import "@/vendor/ainex-react-nextjs-template/ainex/src/app/assets/css/nice-select2.css"
+import "@/vendor/ainex-react-nextjs-template/ainex/src/app/globals.scss"
 import "./globals.css"
 
-const spaceGrotesk = Space_Grotesk({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-heading",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--tj-ff-heading",
 })
 
-const inter = Inter({
+const roboto = Roboto({
   subsets: ["latin"],
-  variable: "--font-body",
+  weight: ["100", "300", "400", "500", "700", "900"],
+  style: ["normal", "italic"],
+  variable: "--tj-ff-body",
 })
 
 export const metadata: Metadata = {
-  title: "Honlapholnapra.hu | Weboldal Készítés Gyorsan",
+  title: "Honlapholnapra.hu | Honlap. Holnapra.",
   description:
     "Professzionális weboldal készítés 1 naptól 1 hétig. Modern technológiákkal, Next.js és React alapokon építünk gyors és reszponzív weboldalakat.",
   keywords: "weboldal készítés, honlap készítés, next.js, react, webfejlesztés, magyar webfejlesztő",
@@ -53,7 +70,7 @@ export default function RootLayout({
           </Script>
         </>
       ) : null}
-      <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased`}>
+      <body className={`${poppins.variable} ${roboto.variable}`}>
         {children}
         <CookieConsent />
         <Analytics />

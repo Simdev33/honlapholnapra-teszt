@@ -1,0 +1,111 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Project CSS
+----------------------------------------*/
+.project-wrapper-3 {
+	padding: 0 30px;
+	@media #{$lg, $md} {
+		padding: 0 20px;
+	}
+	@media #{$sm, $xs} {
+		padding: 0 15px;
+	}
+}
+
+.project-item {
+	&.style-4 {
+		padding: 0;
+		min-height: 560px;
+		.project-img {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
+		.project-content {
+			background-color: var(--tj-color-theme-dark);
+			padding: 30px 20px;
+			margin: 15px;
+			border-radius: 10px;
+			position: absolute;
+			bottom: -50px;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+			@include transition(all 0.3s ease-in-out 0s);
+			&:hover {
+				.icon-btn {
+					i {
+						transform: translateX(45px);
+					}
+				}
+			}
+			@media #{$lg, $md, $sm, $xs} {
+				padding: 20px 15px;
+				margin: 10px;
+			}
+		}
+		.title {
+			width: calc(100% - 70px);
+			@media #{$lg} {
+				font-size: 20px;
+			}
+			@media #{$md} {
+				max-width: 100%;
+				width: calc(100% - 50px);
+			}
+		}
+		.icon-btn {
+			width: 48px;
+			height: 48px;
+			font-size: 21px;
+			background-color: var(--tj-color-theme-primary);
+			overflow: hidden;
+			text-shadow: -45px 0 0;
+			transform: rotate(-45deg);
+			i {
+				transform: rotate(0);
+			}
+			&:hover {
+				transform: rotate(0);
+			}
+		}
+		.categories {
+			padding: 0;
+			border-radius: 0;
+			position: unset;
+			margin-bottom: 12px;
+			background-color: transparent;
+			&::before,
+			&::after {
+				display: none;
+			}
+			a {
+				background-color: var(--tj-color-theme-bg);
+				&:hover {
+					background-color: var(--tj-color-theme-primary);
+					color: var(--tj-color-common-white);
+				}
+			}
+		}
+		&:hover {
+			.project-content {
+				opacity: 1;
+				visibility: visible;
+				bottom: 0;
+			}
+		}
+
+		@media #{$xl, $lg} {
+			min-height: 500px;
+		}
+		@media #{$md, $sm} {
+			min-height: 470px;
+		}
+		@media #{$xs} {
+			min-height: 400px;
+		}
+	}
+}
+
+/* !END: Project CSS */

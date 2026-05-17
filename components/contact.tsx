@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { Mail, Phone, Send } from "lucide-react"
+import { ArrowRight, Mail, Phone } from "lucide-react"
 
 const inputClassName =
   "glass-input w-full rounded-xl text-slate-900 placeholder:text-slate-400 focus:outline-none"
@@ -57,7 +57,7 @@ export function Contact() {
       value: "info@honlapholnapra.hu",
       href: "mailto:info@honlapholnapra.hu",
       iconClass:
-        "bg-gradient-to-br from-violet-600 to-fuchsia-500 shadow-[0_16px_40px_rgba(168,85,247,0.35)]",
+        "bg-gradient-to-br from-orange-500 to-rose-500 shadow-[0_16px_40px_rgba(249,115,22,0.35)]",
     },
     {
       icon: Phone,
@@ -65,28 +65,26 @@ export function Contact() {
       value: "+36 30 194 0601",
       href: "tel:+36301940601",
       iconClass:
-        "bg-gradient-to-br from-cyan-600 to-sky-500 shadow-[0_16px_40px_rgba(6,182,212,0.32)]",
+        "bg-gradient-to-br from-slate-900 to-blue-700 shadow-[0_16px_40px_rgba(15,23,42,0.3)]",
     },
   ] as const
 
   return (
     <section id="kapcsolat" className="relative overflow-hidden py-32">
-      <div className="pointer-events-none absolute bottom-0 left-0 h-[500px] w-[500px] rounded-full bg-blue-500/12 blur-[120px]" />
-      <div className="pointer-events-none absolute top-1/4 right-0 h-[420px] w-[420px] rounded-full bg-cyan-500/10 blur-[100px]" />
+      <div className="pointer-events-none absolute bottom-0 left-0 h-[500px] w-[500px] rounded-full bg-orange-500/12 blur-[120px]" />
+      <div className="pointer-events-none absolute top-1/4 right-0 h-[420px] w-[420px] rounded-full bg-blue-500/10 blur-[100px]" />
       <div className="pointer-events-none absolute bottom-1/3 right-1/4 h-[280px] w-[280px] rounded-full bg-rose-500/8 blur-[90px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-20 text-center">
           <div className="glass mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2">
-            <span className="relative z-10 bg-gradient-to-r from-blue-800 to-cyan-500 bg-clip-text text-sm font-medium text-transparent">
+            <span className="relative z-10 bg-gradient-to-r from-orange-500 to-blue-600 bg-clip-text text-sm font-medium text-transparent">
               Kapcsolat
             </span>
           </div>
           <h2 className="mb-6 text-4xl font-bold text-slate-900 sm:text-5xl">
             Kezdjük el a{" "}
-            <span className="bg-gradient-to-r from-blue-800 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              projekted
-            </span>
+            <span className="text-fuchsia-300">projekted</span>
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-slate-600">
             Írj nekünk, és 24 órán belül válaszolunk.
@@ -128,7 +126,7 @@ export function Contact() {
           </div>
 
           <div className="lg:col-span-3">
-            <div className="glass glass-panel gradient-border rounded-3xl border-t border-t-cyan-400/25 p-8 md:p-10">
+            <div className="glass glass-panel gradient-border rounded-3xl border-t border-t-orange-300/35 p-8 md:p-10">
               <form onSubmit={handleSubmit} className="relative z-10 space-y-6">
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
@@ -201,14 +199,16 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="gradient-purple glow-purple inline-flex items-center gap-2 rounded-2xl px-8 py-4 font-semibold text-white transition-all hover:opacity-90 disabled:opacity-50"
+                  className="ainex-cta-btn disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     "Küldés..."
                   ) : (
                     <>
-                      <Send className="h-5 w-5" />
-                      Üzenet küldése
+                      <span>Üzenet küldése</span>
+                      <span className="ainex-cta-icon">
+                        <ArrowRight className="h-5 w-5" />
+                      </span>
                     </>
                   )}
                 </button>
