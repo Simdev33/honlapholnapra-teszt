@@ -6,17 +6,17 @@ const technologies = [
   {
     name: "Next.js",
     description: "A legmodernebb React keretrendszer szerveroldali rendereléshez.",
-    color: "from-slate-900 to-blue-700",
+    color: "from-slate-900 to-orange-500",
   },
   {
     name: "React",
     description: "A Meta által fejlesztett komponens-alapú frontend könyvtár.",
-    color: "from-blue-700 to-indigo-500",
+    color: "from-blue-700 to-cyan-500",
   },
   {
     name: "Node.js",
     description: "Gyors és skálázható backend JavaScript futtatókörnyezet.",
-    color: "from-emerald-700 to-teal-500",
+    color: "from-orange-500 to-blue-700",
   },
 ]
 
@@ -25,43 +25,41 @@ const features = [
     icon: Smartphone,
     title: "Reszponzív",
     description: "Minden eszközön tökéletes",
-    accent: "from-violet-500 to-fuchsia-500 shadow-[0_16px_40px_rgba(168,85,247,0.3)]",
+    accent: "from-orange-500 to-rose-500 shadow-[0_16px_40px_rgba(249,115,22,0.3)]",
   },
   {
     icon: Search,
     title: "SEO optimalizált",
     description: "Jobb Google helyezés",
-    accent: "from-blue-500 to-indigo-500 shadow-[0_16px_40px_rgba(59,130,246,0.28)]",
+    accent: "from-slate-900 to-blue-700 shadow-[0_16px_40px_rgba(15,23,42,0.28)]",
   },
   {
     icon: Zap,
     title: "Villámgyors",
     description: "Optimalizált sebesség",
-    accent: "from-cyan-500 to-sky-500 shadow-[0_16px_40px_rgba(34,211,238,0.28)]",
+    accent: "from-blue-600 to-cyan-500 shadow-[0_16px_40px_rgba(34,211,238,0.28)]",
   },
   {
     icon: Shield,
     title: "Biztonságos",
     description: "Modern védelem",
-    accent: "from-indigo-500 to-violet-500 shadow-[0_16px_40px_rgba(99,102,241,0.3)]",
+    accent: "from-orange-500 to-blue-600 shadow-[0_16px_40px_rgba(99,102,241,0.3)]",
   },
 ]
 
 export function Technology() {
   return (
     <section id="technologia" className="relative overflow-hidden py-32">
-      <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-[#3b82f6]/10 blur-[120px] pointer-events-none" />
+      <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-orange-400/12 blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-20 text-center">
           <div className="glass mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2">
-            <span className="text-sm text-blue-700">Technológia</span>
+            <span className="text-sm text-orange-600">Technológia</span>
           </div>
           <h2 className="mb-6 text-4xl font-bold text-slate-900 sm:text-5xl">
             Modern{" "}
-            <span className="bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
-              tech stack
-            </span>
+            <span className="text-fuchsia-300">tech stack</span>
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-slate-600">
             A legújabb és legmegbízhatóbb technológiákat használjuk.
@@ -74,13 +72,13 @@ export function Technology() {
               key={tech.name}
               className="group glass-card glass-panel gradient-border rounded-3xl p-8 transition-all duration-500 hover:bg-white/[0.06]"
             >
-              <h3 className={`relative z-10 mb-4 bg-gradient-to-r text-4xl font-bold ${tech.color} bg-clip-text text-transparent`}>
+              <h3 className="relative z-10 mb-4 text-4xl font-bold text-fuchsia-300">
                 {tech.name}
               </h3>
               <p className="relative z-10 leading-relaxed text-slate-600">{tech.description}</p>
               <div className="relative z-10 mt-6 flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-blue-700" />
-                <span className="text-sm text-blue-700">Használjuk</span>
+                <div className="h-2 w-2 rounded-full bg-orange-500" />
+                <span className="text-sm text-orange-600">Használjuk</span>
               </div>
             </div>
           ))}

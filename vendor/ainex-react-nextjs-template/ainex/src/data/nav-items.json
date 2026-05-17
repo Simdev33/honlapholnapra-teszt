@@ -1,0 +1,37 @@
+[
+	{
+		"id": 1,
+		"name": "Kezdőlap",
+		"path": "/",
+		"submenu": []
+	},
+	{
+		"id": 2,
+		"name": "Szolgáltatások",
+		"path": "#services",
+		"submenu": []
+	},
+	{
+		"id": 3,
+		"name": "Folyamat",
+		"path": "#process",
+		"submenu": []
+	},
+	{
+		"id": 4,
+		"name": "Árak",
+		"path": "#pricing",
+		"submenu": []
+	},
+	{
+		"id": 5,
+		"name": "Rólunk",
+		"path": "#about",
+		"submenu": []
+	},
+	{
+		"id": 6,
+		"name": "Kapcsolat",
+		"path": "#kapcsolat"
+	}
+]

@@ -24,6 +24,7 @@
     ],
     "paths": {
       "@/*": [
+        "./vendor/ainex-react-nextjs-template/ainex/src/*",
         "./*"
       ]
     }

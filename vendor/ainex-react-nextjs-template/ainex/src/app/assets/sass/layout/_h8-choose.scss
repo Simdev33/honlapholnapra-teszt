@@ -1,0 +1,18 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Choose CSS
+----------------------------------------*/
+.h8-choose-box {
+	&.style-4 {
+		.choose-inner {
+			text-align: left;
+		}
+		.title {
+			margin-inline-start: 0;
+			margin-inline-end: 0;
+		}
+	}
+}
+
+/* !END: Choose CSS */

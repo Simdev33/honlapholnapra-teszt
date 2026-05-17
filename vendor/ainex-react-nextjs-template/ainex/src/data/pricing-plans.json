@@ -1,0 +1,62 @@
+[
+	{
+		"type": "Alap",
+		"badge": "-50%",
+		"monthlyPrice": "99.000",
+		"yearlyPrice": "99.000",
+		"shortPeriodName": "egyszeri",
+		"longPeriodName": "egyszeri",
+		"desc": "Tökéletes induláshoz kis vállalkozásoknak.",
+		"buttonName": "Ajánlatot kérek",
+		"url": "#kapcsolat",
+		"features": [
+			"Legfeljebb 5 oldal",
+			"Reszponzív dizájn",
+			"Kapcsolati űrlap",
+			"SEO alapbeállítás",
+			"1 hónap támogatás",
+			"Alap analitika beállítás",
+			"Gyors indulási támogatás"
+		]
+	},
+	{
+		"type": "Professzionális",
+		"badge": "Népszerű",
+		"monthlyPrice": "199.000",
+		"yearlyPrice": "199.000",
+		"shortPeriodName": "egyszeri",
+		"longPeriodName": "egyszeri",
+		"desc": "Ideális növekvő vállalkozásoknak.",
+		"buttonName": "Ajánlatot kérek",
+		"url": "#kapcsolat",
+		"features": [
+			"Legfeljebb 15 oldal",
+			"Egyedi dizájn",
+			"Blog rendszer",
+			"Haladó SEO",
+			"Analitika integráció",
+			"3 hónap támogatás",
+			"Tartalomkezelő rendszer"
+		]
+	},
+	{
+		"type": "Prémium",
+		"badge": "Kiemelt",
+		"monthlyPrice": "399.000+",
+		"yearlyPrice": "399.000+",
+		"shortPeriodName": "egyszeri",
+		"longPeriodName": "egyszeri",
+		"desc": "Komplex projektekhez és webshopokhoz.",
+		"buttonName": "Ajánlatot kérek",
+		"url": "#kapcsolat",
+		"features": [
+			"Korlátlan oldalszám",
+			"E-commerce funkciók",
+			"Fizetési integráció",
+			"Egyedi funkciók",
+			"Teljesítmény optimalizálás",
+			"6 hónap támogatás",
+			"Prioritásos ügyfélszolgálat"
+		]
+	}
+]

@@ -1,0 +1,148 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Project CSS
+----------------------------------------*/
+.h7-project-section {
+	position: relative;
+	z-index: 1;
+	padding-bottom: 80px;
+}
+.h7-project-area {
+	background-color: var(--tj-color-theme-bg);
+	border-radius: 24px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: -400px;
+		right: -350px;
+		width: 800px;
+		height: 800px;
+		border-radius: 50%;
+		background: var(--tj-color-theme-primary);
+		-webkit-filter: blur(100px);
+		filter: blur(100px);
+		backdrop-filter: blur(10px);
+		opacity: 0.2;
+		z-index: -1;
+		pointer-events: none;
+		@media #{$lg} {
+			top: -300px;
+			right: -300px;
+			width: 600px;
+			height: 600px;
+		}
+		@media #{$md, $sm, $xs} {
+			top: -200px;
+			right: -200px;
+			width: 400px;
+			height: 400px;
+		}
+	}
+	.sec-heading {
+		.sec-title {
+			max-width: 1025px;
+		}
+	}
+}
+.h7-project-item {
+	&-wrap {
+		background-color: var(--tj-color-theme-dark);
+		margin: 0 0 30px 0;
+		border-radius: 12px;
+	}
+	&.style-5 {
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		align-items: center;
+		background-color: var(--tj-color-theme-dark);
+		opacity: 1;
+		margin: 0;
+		transition: none;
+		position: relative;
+		.project-img {
+			@media #{$xl, $lg} {
+				height: 450px;
+			}
+		}
+		.project-content {
+			margin-inline-start: 45px;
+			@media #{$xl} {
+				margin-inline-start: 25px;
+			}
+			@media #{$lg, $md} {
+				margin-inline-start: 15px;
+			}
+			@media #{$sm, $xs} {
+				margin-inline-start: 0;
+			}
+		}
+		.title {
+			max-width: 532px;
+			width: 100%;
+			margin-bottom: 15px;
+			@media #{$xl} {
+				font-size: 36px;
+			}
+			@media #{$lg} {
+				font-size: 32px;
+			}
+			@media #{$md} {
+				font-size: 28px;
+			}
+			@media #{$sm, $xs} {
+				font-size: 26px;
+			}
+		}
+		.categories {
+			a {
+				border: 1px solid var(--tj-color-border-1);
+				border-radius: 22px;
+			}
+		}
+		.tj-secondary-btn,
+		.tj-primary-btn {
+			margin-top: 25px;
+		}
+
+		@media #{$xxl, $xl} {
+			gap: 40px;
+		}
+		@media #{$lg, $md} {
+			gap: 30px;
+		}
+		@media #{$sm, $xs} {
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+	}
+}
+.h7-project-text-circle {
+	bottom: -10px;
+	&::after,
+	&::before {
+		bottom: 90px;
+		left: -24px;
+		width: 24px;
+		height: 48px;
+		box-shadow: 0 24px 0 0 var(--tj-color-theme-dark);
+		border-radius: 0 0 24px 0;
+		@media #{$md, $sm, $xs} {
+			left: -16px;
+		}
+	}
+	&::after {
+		left: auto;
+		right: -24px;
+		border-radius: 0 0 0 24px;
+		@media #{$md, $sm, $xs} {
+			right: -16px;
+		}
+	}
+}
+
+/* !END: Project CSS */
